@@ -1,0 +1,40 @@
+<div class="header-login">
+	<ul class="header-login-list">
+		<li class="header-login-list-item">
+			<a href="{{ U_LOGIN_LOGOUT }}" class="header-menu-link menu-login">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>{{ lang('LOGIN') }}</span>
+			</a>
+			<div class="header-login-popup">
+				<form action="{{ S_LOGIN_ACTION }}" method="post" id="phpbb-header-login">
+					<fieldset>
+						<legend class="sr-only">{{ lang('LOGIN') }}</legend>
+						<label for="username">
+							<span>{{ lang('USERNAME') ~ lang('COLON') }}</span>
+							<input type="text" name="username" id="username" size="10" class="inputbox" title="{{ lang('USERNAME') }}" autocomplete="username">
+						</label>
+						<label for="password">
+							<span>{{ lang('PASSWORD') ~ lang('COLON') }}</span>
+							<input type="password" name="password" id="password" size="10" class="inputbox" title="{{ lang('PASSWORD') }}" autocomplete="current-password">
+						</label>
+						{% if U_SEND_PASSWORD %}
+							<a href="{{ U_SEND_PASSWORD }}">{{ lang('FORGOT_PASS') }}</a>
+						{% endif %}
+						{% if S_AUTOLOGIN_ENABLED %}
+							<label for="autologin">{{ lang('LOG_ME_IN') }} <input type="checkbox" name="autologin" id="autologin"></label>
+						{% endif %}
+						<input type="submit" name="login" value="{{ lang('LOGIN') }}" class="submit button">
+						{{ S_LOGIN_REDIRECT }}
+						{{ S_FORM_TOKEN_LOGIN }}
+					</fieldset>
+				</form>
+			</div>
+		</li>
+		{% if S_REGISTER_ENABLED and not (S_SHOW_COPPA or S_REGISTRATION) %}
+		<li class="header-login-list-item">
+			&bull;&nbsp;&nbsp;<a href="{{ U_REGISTER }}" class="header-menu-link menu-register">
+				<i class="icon fa-pencil-square-o fa-fw" aria-hidden="true"></i><span>{{ lang('REGISTER') }}</span>
+			</a>
+		</li>
+		{% endif %}
+	</ul>
+</div>
