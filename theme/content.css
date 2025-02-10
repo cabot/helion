@@ -137,6 +137,14 @@ dl a.row-item-link {				/* topic row icon links */
 	margin-left: 9px;
 }
 
+.topic-icon {
+	width: calc((var(--icon-size) / 2) + 1px);
+	height: calc((var(--icon-size) / 2) + 1px);
+	position: absolute;
+	bottom: calc(0px + ((var(--icon-size) / 2) / 2));
+	background-size: contain;
+}
+
 dd.posts, dd.topics, dd.views, dd.extra, dd.mark {
 	width: 80px;
 	text-align: center;

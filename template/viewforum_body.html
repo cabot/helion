@@ -155,8 +155,8 @@
 		<li class="row{% if topicrow.S_ROW_COUNT is even %} bg1{% else %} bg2{% endif %}{% if topicrow.S_POST_GLOBAL %} global-announce{% endif %}{% if topicrow.S_POST_ANNOUNCE %} announce{% endif %}{% if topicrow.S_POST_STICKY %} sticky{% endif %}{% if topicrow.S_TOPIC_REPORTED %} reported{% endif %}">
 			{% EVENT viewforum_body_topic_row_prepend %}
 			<dl class="row-item {{ topicrow.TOPIC_IMG_STYLE }} has-svg-icon">
-				<dt{% if topicrow.TOPIC_ICON_IMG and S_TOPIC_ICONS %} style="background-image: url('{{ T_ICONS_PATH }}{{ topicrow.TOPIC_ICON_IMG }}'); background-repeat: no-repeat;"{% endif %} title="{{ topicrow.TOPIC_FOLDER_IMG_ALT }}">
-					{% if topicrow.S_UNREAD_TOPIC and not S_IS_BOT %}<a href="{{ topicrow.U_NEWEST_POST }}" class="svgicon svgicon-link">{% else %}<span class="svgicon svgicon-span">{% endif %}
+				<dt>
+					{% if topicrow.S_UNREAD_TOPIC and not S_IS_BOT %}<a href="{{ topicrow.U_NEWEST_POST }}" class="svgicon svgicon-link">{% else %}<span class="svgicon svgicon-span">{% endif %}{% if topicrow.TOPIC_ICON_IMG and S_TOPIC_ICONS %} <span class="topic-icon" style="background-image: url('{{ T_ICONS_PATH }}{{ topicrow.TOPIC_ICON_IMG }}'); background-repeat: no-repeat;" title="{{ topicrow.TOPIC_FOLDER_IMG_ALT }}"></span>{% endif %}
 						{{ include ('svgicons/' ~ topicrow.TOPIC_IMG_STYLE ~ '.svg', ignore_missing = true) }}
 					{% if topicrow.S_UNREAD_TOPIC and not S_IS_BOT %}</a>{% else %}</span>{% endif %}
 					<div class="list-inner">
