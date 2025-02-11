@@ -1230,8 +1230,11 @@ li.notification-reported strong, li.notification-disapproved strong {
 	border-radius: var(--block-radius);
 	text-shadow: var(--text-shadow);
 	box-shadow: var(--box-shadow);
+	transition: var(--transition-bg);
 }
-
+.forumbg .header:hover, .forabg .header:hover, th:hover, .header:hover{
+	background-color: var(--secondary-color);
+}
 .time {
 	color: rgba(0, 0, 0, 0.5);
 	text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
