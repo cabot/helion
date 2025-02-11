@@ -141,8 +141,9 @@ dl a.row-item-link {				/* topic row icon links */
 	width: calc((var(--icon-size) / 2) + 1px);
 	height: calc((var(--icon-size) / 2) + 1px);
 	position: absolute;
-	bottom: calc(0px + ((var(--icon-size) / 2) / 2));
+	bottom: calc(var(--icon-size) / 8);;
 	background-size: contain;
+	background-repeat: no-repeat;
 }
 
 dd.posts, dd.topics, dd.views, dd.extra, dd.mark {

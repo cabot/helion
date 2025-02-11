@@ -79,8 +79,9 @@
 			{% EVENT search_results_topic_before %}
 			<li class="row{% if searchresults.S_ROW_COUNT is even %} bg1{% else %} bg2{% endif %}">
 				<dl class="row-item {{ searchresults.TOPIC_IMG_STYLE }} has-svg-icon">
-					<dt{% if searchresults.TOPIC_ICON_IMG %} style="background-image: url({{ T_ICONS_PATH }}{{ searchresults.TOPIC_ICON_IMG }}); background-repeat: no-repeat;"{% endif %} title="{{ searchresults.TOPIC_FOLDER_IMG_ALT }}">
+					<dt>
 						{% if searchresults.S_UNREAD_TOPIC and not S_IS_BOT %}<a href="{{ searchresults.U_NEWEST_POST }}" class="svgicon svgicon-link">{% else %}<span class="svgicon svgicon-span">{% endif %}
+							{% if searchresults.TOPIC_ICON_IMG %}<span class="topic-icon" style="background-image: url({{ T_ICONS_PATH }}{{ searchresults.TOPIC_ICON_IMG }});" title="{{ searchresults.TOPIC_FOLDER_IMG_ALT }}"></span> {% endif %}
 							{{ include ('svgicons/' ~ searchresults.TOPIC_IMG_STYLE ~ '.svg', ignore_missing = true) }}
 						{% if searchresults.S_UNREAD_TOPIC and not S_IS_BOT %}</a>{% else %}</span>{% endif %}
 						<div class="list-inner">
