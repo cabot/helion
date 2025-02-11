@@ -1233,7 +1233,7 @@ li.notification-reported strong, li.notification-disapproved strong {
 	transition: var(--transition-bg);
 }
 .forumbg .header:hover, .forabg .header:hover, th:hover, .header:hover{
-	background: var(--secondary-color);
+	background-color: var(--secondary-color);
 }
 .time {
 	color: rgba(0, 0, 0, 0.5);
