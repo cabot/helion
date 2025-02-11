@@ -16,7 +16,7 @@
 			<dl class="row-item {{ topicrow.TOPIC_IMG_STYLE }} has-svg-icon">
 				<dt>
 					{% if topicrow.S_UNREAD_TOPIC %}<a href="{{ topicrow.U_NEWEST_POST }}" class="svgicon svgicon-link">{% else %}<span class="svgicon svgicon-span">{% endif %}
-						{% if topicrow.TOPIC_ICON_IMG and topicrow.S_TOPIC_ICONS %}<span class="topic-icon" style="background-image: url({{ T_ICONS_PATH }}{{ topicrow.TOPIC_ICON_IMG }}); background-repeat: no-repeat;"></span> {% endif %}
+						{% if topicrow.TOPIC_ICON_IMG and topicrow.S_TOPIC_ICONS %}<span class="topic-icon" style="background-image: url({{ T_ICONS_PATH }}{{ topicrow.TOPIC_ICON_IMG }});"></span> {% endif %}
 						{{ include ('svgicons/' ~ topicrow.TOPIC_IMG_STYLE ~ '.svg', ignore_missing = true) }}
 					{% if topicrow.S_UNREAD_TOPIC %}</a>{% else %}</span>{% endif %}
 					<div class="list-inner">
