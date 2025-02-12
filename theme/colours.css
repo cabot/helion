@@ -817,7 +817,7 @@ Colours and backgrounds for cp.css
 }
 
 .panel-container .panel li.row {
-	border: var(--block-border);
+	border-block: var(--block-border);
 }
 
 ul.cplist {
