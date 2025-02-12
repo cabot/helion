@@ -312,35 +312,41 @@ dl.details dd {
 }
 
 .jumpbox-cat-link {
-	background-color: #0076b1;
-	border-top-color: #0076B1;
+	background-color: var(--primary-color);
+	border-top-color: var(--primary-color);
 	color: #FFFFFF;
 }
 
 .jumpbox-cat-link:hover {
-	background-color: #12A3EB;
-	border-top-color: #12A3EB;
+	background-color: var(--secondary-color);
+	border-top-color: var(--secondary-color);
 	color: #FFFFFF;
 }
 
 .jumpbox-forum-link {
-	background-color: #E1EBF2;
+	background-color: var(--block-background);
 }
 
 .jumpbox-forum-link:hover {
-	background-color: #F6F4D0;
+	--primary-hue: 210;
+	--primary-saturation: 100%;
+	--primary-lightness: 97%;
+	background-color: hsl(var(--primary-hue), var(--primary-saturation), var(--primary-lightness));
 }
 
 .jumpbox .dropdown .pointer-inner {
-	border-color: #E1EBF2 transparent;
+	border-color: var(--block-background) transparent;
 }
 
 .jumpbox-sub-link {
-	background-color: #E1EBF2;
+	background-color: var(--block-background);
 }
 
 .jumpbox-sub-link:hover {
-	background-color: #F1F8FF;
+	--primary-hue: 210;
+	--primary-saturation: 100%;
+	--primary-lightness: 97%;
+	background-color: hsl(var(--primary-hue), var(--primary-saturation), var(--primary-lightness));
 }
 
 /* Miscellaneous styles
