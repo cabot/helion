@@ -312,7 +312,7 @@ dl.details dd {
 }
 
 .jumpbox-cat-link {
-	background-color: var(--primary-color);
+	background: var(--primary-color) var(--common-gradient);
 	border-top-color: var(--primary-color);
 	color: #FFFFFF;
 }
