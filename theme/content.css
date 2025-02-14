@@ -1,3 +1,9 @@
+.rtl {
+	--content-flow-start: right;
+	--content-flow-end: left;
+	--scale-x: scaleX(-1);
+}
+
 /* Content Styles
 ---------------------------------------- */
 
@@ -137,13 +143,29 @@ dl a.row-item-link {				/* topic row icon links */
 	margin-left: 9px;
 }
 
+dl.has-svg-icon dt .svgicon {
+	--folder-icon-size: 32px;
+	margin: 0 0.8em;
+	width: var(--folder-icon-size);
+	height: var(--folder-icon-size);
+	position: relative;
+}
+
+.folder-icon {
+	width: inherit;
+	height: inherit;
+	transform: var(--scale-x, none)
+}
+
 .topic-icon {
-	width: calc((var(--icon-size) / 2) + 1px);
-	height: calc((var(--icon-size) / 2) + 1px);
+	--topic-icon-size: 14px;
+	--topic-icon-calc-pos: calc((var(--topic-icon-size) / 8 * -1));
+	width: var(--topic-icon-size);
+	height: var(--topic-icon-size);
 	position: absolute;
-	bottom: calc(var(--icon-size) / 8);;
-	background-size: contain;
-	background-repeat: no-repeat;
+	inset-inline-start: var(--topic-icon-calc-pos);
+	bottom: var(--topic-icon-calc-pos);
+	background: no-repeat 0 0 / contain;
 }
 
 dd.posts, dd.topics, dd.views, dd.extra, dd.mark {
