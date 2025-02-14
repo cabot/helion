@@ -312,35 +312,35 @@ dl.details dd {
 }
 
 .jumpbox-cat-link {
-	background-color: #0076b1;
-	border-top-color: #0076B1;
+	background: var(--primary-color) var(--common-gradient);
+	border-top-color: var(--primary-color);
 	color: #FFFFFF;
 }
 
 .jumpbox-cat-link:hover {
-	background-color: #12A3EB;
-	border-top-color: #12A3EB;
+	background-color: var(--secondary-color);
+	border-top-color: var(--secondary-color);
 	color: #FFFFFF;
 }
 
 .jumpbox-forum-link {
-	background-color: #E1EBF2;
+	background-color: var(--block-background);
 }
 
 .jumpbox-forum-link:hover {
-	background-color: #F6F4D0;
+	background-color: hsl(var(--primary-hue), 100%, 97%);
 }
 
 .jumpbox .dropdown .pointer-inner {
-	border-color: #E1EBF2 transparent;
+	border-color: var(--block-background) transparent;
 }
 
 .jumpbox-sub-link {
-	background-color: #E1EBF2;
+	background-color: var(--block-background);
 }
 
 .jumpbox-sub-link:hover {
-	background-color: #F1F8FF;
+	background-color: hsl(var(--primary-hue), 100%, 97%);
 }
 
 /* Miscellaneous styles
@@ -817,7 +817,7 @@ Colours and backgrounds for cp.css
 }
 
 .panel-container .panel li.row {
-	border: var(--block-border);
+	border-block: var(--block-border);
 }
 
 ul.cplist {
@@ -1004,7 +1004,22 @@ label {
 option.disabled-option {
 	color: graytext;
 }
-
+ input[type="text"],  input[type="password"],  input[type="email"],  textarea,  select {
+	color: #808080;
+	background-color: #fff;
+	border-color: #d4d4d4;
+}
+ input[type="text"]:hover,  input[type="password"]:hover,  input[type="email"]:hover,  textarea:hover,  select:hover {
+	color: #000;
+	border-color: #a2b1bc;
+}
+ input[type="text"]:focus,  input[type="password"]:focus,  input[type="email"]:focus,  textarea:focus,  select:focus {
+	color: #000;
+	border-color: #d28484;
+}
+ input[type="text"]:invalid,  input[type="password"]:invalid,  input[type="email"]:invalid,  textarea:invalid {
+	color: #d28484;
+}
 /* Definition list layout for forms
 ---------------------------------------- */
 dd label {
