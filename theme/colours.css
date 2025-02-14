@@ -328,10 +328,7 @@ dl.details dd {
 }
 
 .jumpbox-forum-link:hover {
-	--primary-hue: 210;
-	--primary-saturation: 100%;
-	--primary-lightness: 97%;
-	background-color: hsl(var(--primary-hue), var(--primary-saturation), var(--primary-lightness));
+	background-color: hsl(var(--primary-hue), 100%, 97%);
 }
 
 .jumpbox .dropdown .pointer-inner {
@@ -343,10 +340,7 @@ dl.details dd {
 }
 
 .jumpbox-sub-link:hover {
-	--primary-hue: 210;
-	--primary-saturation: 100%;
-	--primary-lightness: 97%;
-	background-color: hsl(var(--primary-hue), var(--primary-saturation), var(--primary-lightness));
+	background-color: hsl(var(--primary-hue), 100%, 97%);
 }
 
 /* Miscellaneous styles
