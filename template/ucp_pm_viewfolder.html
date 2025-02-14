@@ -58,10 +58,14 @@
 		{% for messagerow in loops.messagerow %}
 			<li class="row{% if messagerow.S_ROW_COUNT is odd %} bg1{% else %} bg2{% endif %}{% if messagerow.PM_CLASS %} {{ messagerow.PM_CLASS }}{% endif %}">
 				<dl class="row-item {{ messagerow.FOLDER_IMG_STYLE }} has-svg-icon">
-					<dt{% if messagerow.PM_ICON_URL and S_PM_ICONS %} style="background-image: url({{ messagerow.PM_ICON_URL }}); background-repeat: no-repeat;"{% endif %}>
-						{% if messagerow.S_PM_UNREAD and not messagerow.S_PM_DELETED %}<a href="{{ messagerow.U_VIEW_PM }}" class="svgicon svgicon-link">{% else %}<span class="svgicon svgicon-span">{% endif %}
-							{{ include ('svgicons/' ~ messagerow.FOLDER_IMG_STYLE ~ '.svg', ignore_missing = true) }}
-						{% if messagerow.S_PM_UNREAD and not messagerow.S_PM_DELETED %}</a>{% else %}</span>{% endif %}
+					<dt>
+						{% if not messagerow.S_PM_DELETED %}<a href="{{ messagerow.U_VIEW_PM }}" class="svgicon svgicon-link">{% else %}<span class="svgicon svgicon-span">{% endif %}
+							{{ include('svgicons/' ~ messagerow.FOLDER_IMG_STYLE ~ '.svg', {
+								s_not_link: messagerow.S_PM_DELETED ? true,
+								'aria_label': messagerow.SUBJECT
+							}, ignore_missing = true) }}
+							{% if messagerow.PM_ICON_URL and S_PM_ICONS %}<span class="topic-icon" style="background-image: url({{ messagerow.PM_ICON_URL }});" aria-hidden="true"></span>{% endif %}
+						{% if not messagerow.S_PM_DELETED %}</a>{% else %}</span>{% endif %}
 						<div class="list-inner">
 
 						{% if messagerow.S_PM_DELETED %}

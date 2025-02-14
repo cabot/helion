@@ -31,16 +31,16 @@
 			{% EVENT forumlist_body_forum_row_prepend %}
 			<dl class="row-item {{ forumrow.FORUM_IMG_STYLE }} has-svg-icon">
 				<dt title="{% if forumrow.S_IS_LINK %}{{ lang('FORUM_LINK') }}{% else %}{{ forumrow.FORUM_FOLDER_IMG_ALT }}{% endif %}">
-					{% if forumrow.S_UNREAD_FORUM %}<a href="{{ forumrow.U_VIEWFORUM }}" class="svgicon svgicon-link">{% else %}<span class="svgicon svgicon-span">{% endif %}
-					{{ include ('svgicons/' ~ forumrow.FORUM_IMG_STYLE ~ '.svg', ignore_missing = true) }}
-					{% if forumrow.S_UNREAD_FORUM %}</a>{% else %}</span>{% endif %}
+					<a href="{{ forumrow.U_VIEWFORUM }}" class="svgicon svgicon-link">
+						{{ include('svgicons/' ~ forumrow.FORUM_IMG_STYLE ~ '.svg', {
+							'aria_label': forumrow.FORUM_NAME ~ (forumrow.S_IS_LINK ? (' - ' ~ lang('FORUM_LINK')) : forumrow.S_UNREAD_FORUM ? (' - ' ~ forumrow.FORUM_FOLDER_IMG_ALT))
+						}, ignore_missing = true) }}
+					</a>
 					<div class="list-inner">
-						{% if S_ENABLE_FEEDS and forumrow.S_FEED_ENABLED %}
-							{% if FORUMROW_FEED_ICON %}
+						{% if definition.FORUMROW_FEED_ICON and (S_ENABLE_FEEDS and forumrow.S_FEED_ENABLED) %}
 							<a class="feed-icon-forum" title="{{ lang('FEED') }} - {{ forumrow.FORUM_NAME }}" href="{{ U_FEED }}?f={{ forumrow.FORUM_ID }}">
 								<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">{{ lang('FEED') }} - {{ forumrow.FORUM_NAME }}</span>
 							</a>
-							{% endif %}
 						{% endif %}
 						{% if forumrow.FORUM_IMAGE %}
 							{% EVENT forumlist_body_forum_image_before %}

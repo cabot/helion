@@ -29,11 +29,6 @@ html {
 	--transition-bg: background-color 0.25s ease;
 }
 
-.rtl {
-	--content-flow-start: right;
-	--content-flow-end: left;
-}
-
 html,
 body {
 	color: #333;
@@ -784,23 +779,33 @@ Colours and backgrounds for buttons.css
 .phpbb_yahoo-icon			{ background-position: -224px 0; }
 
 /* Forum icons & Topic icons */
-dl.has-svg-icon dt .svgicon {
-	--icon-size: 32px;
-	margin: 0 0.8em;
-	width: var(--icon-size);
-	height: var(--icon-size);
+.folder-main-fill {
+	fill: #f9f9f9;
 }
 
-.svgicon svg {
-	width: inherit;
-	height: inherit;
+.folder-main-stroke {
+	stroke: #d0d0d0;
 }
 
-.state-color {
+.folder-neutral-fill,
+.folder-locked-fill {
+	fill: #808080;
+}
+
+.folder-neutral-stroke {
+	stroke: #808080;
+}
+
+.folder-mine-fill {
+	fill: #fff;
+}
+
+.folder-state-fill {
 	fill: var(--primary-color);
 }
 
-[class*="_unread"] .state-color {
+[class*="_unread"] .folder-state-fill,
+[class*="_unread"] .folder-locked-fill {
 	fill: var(--secondary-color);
 }
 

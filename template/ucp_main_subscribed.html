@@ -24,9 +24,11 @@
 		<li class="row{% if forumrow.S_ROW_COUNT is odd %} bg1{% else %} bg2{% endif %}">
 			<dl class="row-item {{ forumrow.FORUM_IMG_STYLE }} has-svg-icon">
 				<dt>
-					{% if forumrow.S_UNREAD_FORUM %}<a href="{{ forumrow.U_VIEWFORUM }}" class="svgicon svgicon-link">{% else %}<span class="svgicon svgicon-span">{% endif %}
-						{{ include ('svgicons/' ~ forumrow.FORUM_IMG_STYLE ~ '.svg', ignore_missing = true) }}
-					{% if forumrow.S_UNREAD_FORUM %}</a>{% else %}</span>{% endif %}
+					<a href="{{ forumrow.U_VIEWFORUM }}" class="svgicon svgicon-link">
+						{{ include('svgicons/' ~ forumrow.FORUM_IMG_STYLE ~ '.svg', {
+							'aria_label': forumrow.FORUM_NAME
+						}, ignore_missing = true) }}
+					</a>
 					<div class="list-inner">
 						<a href="{{ forumrow.U_VIEWFORUM }}" class="forumtitle">{{ forumrow.FORUM_NAME }}</a><br />
 						{{ forumrow.FORUM_DESC }}
@@ -80,11 +82,13 @@
 	{% for topicrow in loops.topicrow %}
 		<li class="row{% if topicrow.S_TOPIC_REPORTED %} reported{% elseif topicrow.S_ROW_COUNT is odd %} bg1{% else %} bg2{% endif %}">
 			<dl class="row-item {{ topicrow.TOPIC_IMG_STYLE }} has-svg-icon">
-				<dt>
-					{% if topicrow.S_UNREAD_TOPIC %}<a href="{{ topicrow.U_NEWEST_POST }}" class="svgicon svgicon-link">{% else %}<span class="svgicon svgicon-span">{% endif %}
-						{% if topicrow.TOPIC_ICON_IMG %} <span style="background-image: url({{ T_ICONS_PATH }}{{ topicrow.TOPIC_ICON_IMG }});" class="topic-icon" title="{{ topicrow.TOPIC_FOLDER_IMG_ALT }}"></span> {% endif %}
-						{{ include ('svgicons/' ~ topicrow.TOPIC_IMG_STYLE ~ '.svg', ignore_missing = true) }}
-					{% if topicrow.S_UNREAD_TOPIC %}</a>{% else %}</span>{% endif %}
+				<dt title="{{ topicrow.TOPIC_FOLDER_IMG_ALT }}">
+					<a href="{{ topicrow.S_UNREAD_TOPIC ? topicrow.U_NEWEST_POST : topicrow.U_VIEW_TOPIC }}" class="svgicon svgicon-link"{% if topicrow.S_UNREAD_TOPIC %} title="{{ lang('VIEW_NEWEST_POST') }}"{% endif %}>
+						{{ include('svgicons/' ~ topicrow.TOPIC_IMG_STYLE ~ '.svg', {
+							'aria_label': topicrow.TOPIC_TITLE ~ (topicrow.S_UNREAD_TOPIC ? (' - ' ~ lang('VIEW_NEWEST_POST')))
+						}, ignore_missing = true) }}
+						{% if topicrow.TOPIC_ICON_IMG %}<span class="topic-icon" style="background-image: url({{ T_ICONS_PATH ~ topicrow.TOPIC_ICON_IMG }});" aria-hidden="true"></span>{% endif %}
+					</a>
 					<div class="list-inner">
 						{% if topicrow.S_UNREAD_TOPIC %}
 							<a class="unread" href="{{ topicrow.U_NEWEST_POST }}">
