@@ -942,7 +942,9 @@ ul.cplist {
 
 /* Friends list */
 .cp-mini {
-	background-color: #EEF5F9;
+	background-color: var(--block-background);
+    border: var(--block-border);
+    border-radius: var(--block-radius);
 }
 
 dl.mini dt {
