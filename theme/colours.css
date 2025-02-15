@@ -27,6 +27,9 @@ html {
 	--text-shadow: 1px 1px 0 hsla(0, 0%, 0%, 0.2);
 	--box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.25);
 	--transition-bg: background-color 0.25s ease;
+
+	--text-error : #bc2a2a;
+	--text-dark: #000000;
 }
 
 html,
@@ -158,17 +161,17 @@ a:hover {
 
 .panel {
 	background-color: var(--block-background);
-	color: #28313F;
+	color: var(--text-dark);
 	border: var(--block-border);
 }
 
 .post:target .content {
-	color: #000000;
+	color: var(--text-dark);
 }
 
 .post h3 a.first-unread,
 .post:target h3 a {
-	color: #000000;
+	color: var(--text-dark);
 }
 
 .ucprowbg {
@@ -219,7 +222,7 @@ table.table1 tbody tr:not(.big-column):hover td {
 
 table.table1 tbody tr:hover, table.table1 tbody tr.hover {
 	background-color: #CFE1F6;
-	color: #000;
+	color: var(--text-dark);
 }
 
 table.table1 td {
@@ -234,14 +237,14 @@ table.table1 tbody td {
 }
 
 table.table1 tbody th {
-	border-bottom-color: #000000;
+	border-bottom-color: var(--text-dark);
 	color: #333333;
 	background-color: #fff;
 	border-radius: 5px;
 }
 
 table.info tbody th {
-	color: #000000;
+	color: var(--text-dark);
 }
 
 tr.big-column {
@@ -251,7 +254,7 @@ tr.big-column {
 /* Misc layout styles
 ---------------------------------------- */
 dl.details dt {
-	color: #000000;
+	color: var(--text-dark);
 }
 
 dl.details dd {
@@ -366,7 +369,7 @@ dl.details dd {
 }
 
 .error {
-	color: #BC2A4D;
+	color: var(--text-error);
 }
 
 .row.reported {
@@ -382,8 +385,14 @@ li.row.reported:hover {
 }
 
 div.rules {
-	background-color: #ECD5D8;
-	color: #BC2A4D;
+	background-color: #f6e7e7;
+	color: var(--text-error);
+	border: var(--block-border);
+	border-color: #eadada;
+}
+
+div.rules:hover {
+	border-color: #e4c6c6;
 }
 
 p.post-notice {
@@ -417,7 +426,7 @@ li.row {
 }
 
 li.row strong {
-	color: #000000;
+	color: var(--text-dark);
 }
 
 li.row:hover {
@@ -566,7 +575,7 @@ fieldset.polls dl {
 }
 
 fieldset.polls dl.voted {
-	color: #000000;
+	color: var(--text-dark);
 }
 
 fieldset.polls dd div {
@@ -630,7 +639,7 @@ fieldset.polls dd div {
 /* Poster profile block
 ----------------------------------------*/
 .postprofile {
-	color: #666666;
+	color: var(--text-dark);
 	border-width: 0 1px 0 0;
 	border-color: #e8e8e8;
 	float: left;
@@ -641,7 +650,7 @@ fieldset.polls dd div {
 }
 
 .postprofile strong {
-	color: #000000;
+	color: #606060;
 }
 
 .online {
@@ -720,7 +729,7 @@ Colours and backgrounds for buttons.css
 
 .pagination li.ellipsis span {
 	background: transparent;
-	color: #000000;
+	color: var(--text-dark);
 }
 
 .pagination li.active span {
@@ -950,7 +959,7 @@ dl.mini dt {
 ----------------------------------------*/
 /* PM Message history */
 .current {
-	color: #000000 !important;
+	color: var(--text-dark) !important;
 }
 
 /* PM marking colours */
@@ -995,12 +1004,12 @@ Colours and backgrounds for forms.css
 select {
 	border-color: #666666;
 	background-color: #FAFAFA;
-	color: #000;
+	color: var(--text-dark);
 	padding: 4px;
 }
 
 label {
-	color: #425067;
+	color: var(--text-dark);
 }
 
 option.disabled-option {
@@ -1012,11 +1021,11 @@ option.disabled-option {
 	border-color: #d4d4d4;
 }
  input[type="text"]:hover,  input[type="password"]:hover,  input[type="email"]:hover,  textarea:hover,  select:hover {
-	color: #000;
+	color: var(--text-dark);
 	border-color: #a2b1bc;
 }
  input[type="text"]:focus,  input[type="password"]:focus,  input[type="email"]:focus,  textarea:focus,  select:focus {
-	color: #000;
+	color: var(--text-dark);
 	border-color: #d28484;
 }
  input[type="text"]:invalid,  input[type="password"]:invalid,  input[type="email"]:invalid,  textarea:invalid {
@@ -1034,7 +1043,7 @@ fieldset.fields1 {
 
 /* Hover effects */
 fieldset dl:hover dt label {
-	color: #000000;
+	color: var(--text-dark);
 }
 
 fieldset.fields2 dl:hover dt label {
@@ -1144,12 +1153,12 @@ input.disabled {
 
 .dropdown-extended ul li:hover {
 	background-color: #CFE1F6;
-	color: #000000;
+	color: var(--text-dark);
 }
 
 .dropdown-extended .header, .dropdown-extended .footer {
 	border-color: var(--primary-color);
-	color: #000000;
+	color: var(--text-dark);
 }
 
 .dropdown-extended .footer {
@@ -1207,7 +1216,7 @@ a.header-avatar svg {
 }
 
 li.notification-reported strong, li.notification-disapproved strong {
-	color: #bc2a2a;
+	color: var(--text-error);
 }
 
 .notification_list ul li svg {
