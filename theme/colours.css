@@ -58,8 +58,7 @@ h3 {
 }
 
 hr {
-	border-color: #fff;
-	border-top-color: #CCCCCC;
+	border-color: #d4d4d4;
 }
 
 /*
@@ -816,10 +815,6 @@ Colours and backgrounds for cp.css
 
 /* Main CP box
 ----------------------------------------*/
-
-.panel-container h3, .panel-container hr, .cp-menu hr {
-	border-color: #A4B3BF;
-}
 
 .panel-container .panel li.row {
 	border-block: var(--block-border);
