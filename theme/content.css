@@ -719,11 +719,7 @@ fieldset.polls dd div {
 	line-height: 1.2em;
 	margin-left: 8px;
 }
-.postprofile dt,
-.postprofile dd.profile-rank,
-dd.profile-user-status {
-	text-align: center;
-}
+
 .profile-user-status span {
     border-radius: var(--block-radius);
     display: inline-block;

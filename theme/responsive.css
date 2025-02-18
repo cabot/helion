@@ -452,7 +452,7 @@
 		display: none;
 	}
 
-	.postprofile dt, .postprofile dd.profile-rank, .search .postprofile dd {
+	.postprofile dt, .postprofile dd.profile-rank, .postprofile dd.profile-user-status, .search .postprofile dd {
 		display: block;
 		margin: 0;
 	}
@@ -543,6 +543,12 @@
 
 	.postprofile {
 		width: 200px;
+	}
+
+	.postprofile dt,
+	.postprofile dd.profile-rank,
+	.postprofile dd.profile-user-status {
+	text-align: center;
 	}
 }
 
