@@ -10,7 +10,7 @@
 	</linearGradient>
 	</defs>
 
-	<rect width="80" height="80" rx="7" ry="7" fill="var(--primary-color, hsl(209, 68%, 44%))"/>
+	<rect class="no-avatar-svg" width="80" height="80" rx="7" ry="7" fill="var(--primary-color, hsl(209, 68%, 44%))"/>
 
 	<rect width="80" height="80" rx="7" ry="7" fill="url(#overlayGradient)"/>
 
