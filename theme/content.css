@@ -719,7 +719,22 @@ fieldset.polls dd div {
 	line-height: 1.2em;
 	margin-left: 8px;
 }
-
+.postprofile dt,
+.postprofile dd.profile-rank,
+dd.profile-user-status {
+	text-align: center;
+}
+.profile-user-status span {
+    border-radius: var(--block-radius);
+    display: inline-block;
+    padding: .25em .5em;
+    text-transform: uppercase;
+	margin-bottom: 10px;
+	user-select: none;
+}
+.postprofile:has(.profile-user-status) .profile-rank {
+	margin-bottom: 0;
+}
 .postprofile dd {
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -744,8 +759,8 @@ fieldset.polls dd div {
 }
 
 .postprofile .avatar {
-	display: block;
-	float: left;
+	display: inline-block;
+	float: none;
 	max-width: 100%;
 }
 
