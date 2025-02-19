@@ -2,7 +2,8 @@
 ---------------------------------------- */
 
 @media (max-width: 320px) {
-	select, .inputbox {
+	select,
+	.inputbox {
 		max-width: 240px;
 	}
 }
@@ -30,26 +31,24 @@
 		white-space: normal;
 	}
 
-	select, .inputbox {
+	select,
+	.inputbox {
 		max-width: 260px;
-	}
-
-	.captcha-panel dd.captcha {
-		margin-left: 0;
 	}
 
 	.captcha-panel dd.captcha-image img {
 		width: 100%;
 	}
 
-	dl.details dt, dl.details dd {
+	dl.details dt,
+	dl.details dd {
 		width: auto;
 		float: none;
-		text-align: left;
+		text-align: start;
 	}
 
 	dl.details dd {
-		margin-left: 20px;
+		margin-inline-start: 20px;
 	}
 
 	p.responsive-center {
@@ -60,7 +59,7 @@
 
 	.action-bar > div {
 		margin-bottom: 5px;
- 	}
+	}
 
 	.action-bar > .pagination {
 		float: none;
@@ -93,92 +92,41 @@
 }
 
 @media (max-width: 550px) {
-	ul.topiclist.forums dt {
-		margin-right: 0;
-	}
-
-	ul.topiclist.forums dt .list-inner {
-		margin-right: 0;
-	}
-
 	ul.topiclist.forums dd.lastpost {
 		display: none;
 	}
 }
 
 @media (max-width: 700px) {
-	.responsive-hide { display: none !important; }
-	.responsive-show { display: block !important; }
-	.responsive-show-inline { display: inline !important; }
-	.responsive-show-inline-block { display: inline-block !important; }
+	.responsive-hide {
+		display: none !important;
+	}
+
+	.responsive-show {
+		display: block !important;
+	}
+
+	.responsive-show-inline {
+		display: inline !important;
+	}
+
+	.responsive-show-inline-block {
+		display: inline-block !important;
+	}
 
 	/* Content wrappers
 	----------------------------------------*/
-	html {
-		height: auto;
-	}
-
-	body {
-		padding: 0;
-	}
-
 	.wrap {
 		border: none;
-		border-radius: 0;
-		margin: 0;
 		min-width: 290px;
 		padding: 0 5px;
 	}
 
-	/* Common block wrappers
-	----------------------------------------*/
-	.headerbar, .navbar, .forabg, .forumbg, .post, .panel {
-		border-radius: 0;
-		margin-left: -5px;
-		margin-right: -5px;
-	}
-
-	.cp-main .forabg, .cp-main .forumbg, .cp-main .post, .cp-main .panel {
-		border-radius: 7px;
-	}
-
-	/* Logo block
-	----------------------------------------*/
-	.site-description {
-		float: none;
-		width: auto;
-		text-align: center;
-	}
-
-	.logo {
-		/* change display value to inline-block to show logo */
-		display: none;
-		float: none;
-		padding: 10px;
-	}
-
-	.site-description h1, .site-description p {
-		text-align: inherit;
-		float: none;
-		margin: 5px;
-		line-height: 1.2em;
-		overflow: hidden;
-		text-overflow: ellipsis;
-	}
-
-	.site-description p, .search-header {
-		display: none;
-	}
-
-	/* Navigation
-	----------------------------------------*/
-	.headerbar + .navbar {
-		margin-top: -5px;
-	}
-
 	/* Search
 	----------------------------------------*/
-	.responsive-search { display: block !important; }
+	.responsive-search {
+		display: block !important;
+	}
 
 	/* .topiclist lists
 	----------------------------------------*/
@@ -190,50 +138,38 @@
 		padding-bottom: 4px;
 	}
 
-	ul.topiclist li.header dt, ul.topiclist li.header dt .list-inner {
-		margin-right: 0 !important;
-		padding-right: 0;
+	ul.topiclist li.header dt,
+	ul.topiclist li.header dt .list-inner {
+		padding-inline-end: 0;
 	}
 
 	ul.topiclist li.header dd {
-		display: none !important;
-	}
-
-	ul.topiclist dt .list-inner.with-mark {
-		padding-right: 34px;
+		display: none;
 	}
 
 	ul.topiclist dt .list-inner {
 		min-height: 28px;
+		flex: 1;
 	}
 
 	ul.topiclist li.header dt .list-inner {
 		min-height: 0;
 	}
 
-	ul.topiclist dd {
+	ul.topiclist dd:not(.mark) {
 		display: none;
-	}
-	ul.topiclist dd.mark {
-		display: block;
 	}
 
 	/* Forums and topics lists
 	----------------------------------------*/
 
 	ul.topiclist dd.mark {
-		display: block;
-		position: absolute;
-		right: 5px;
-		top: 0;
-		margin: 0;
 		width: auto;
-		min-width: 0;
-		text-align: left;
-		padding: 4px;
+		padding: 4px 8px;
 	}
 
-	ul.topiclist.forums dd.topics dfn, ul.topiclist.topics dd.posts dfn {
+	ul.topiclist.forums dd.topics dfn,
+	ul.topiclist.topics dd.posts dfn {
 		position: relative;
 		left: 0;
 		width: auto;
@@ -265,15 +201,20 @@
 
 	/* Responsive tables
 	----------------------------------------*/
-	table.responsive, table.responsive tbody, table.responsive tr, table.responsive td {
+	table.responsive,
+	table.responsive tbody,
+	table.responsive tr,
+	table.responsive td {
 		display: block;
 	}
 
-	table.responsive thead, table.responsive th {
+	table.responsive thead,
+	table.responsive th {
 		display: none;
 	}
 
-	table.responsive.show-header thead, table.responsive.show-header th:first-child {
+	table.responsive.show-header thead,
+	table.responsive.show-header th:first-child {
 		display: block;
 		width: auto !important;
 		text-align: start;
@@ -308,7 +249,7 @@
 
 	table.responsive span.rank-img {
 		float: none;
-		padding-right: 5px;
+		padding-inline-end: 5px;
 	}
 
 	table.responsive.memberlist td:first-child input[type="checkbox"] {
@@ -317,18 +258,23 @@
 
 	/* Forms
 	----------------------------------------*/
-	fieldset dt, fieldset.fields1 dt, fieldset.fields2 dt {
+	fieldset dt,
+	fieldset.fields1 dt,
+	fieldset.fields2 dt {
 		width: auto;
 		float: none;
 	}
 
-	fieldset dd, fieldset.fields1 dd, fieldset.fields2 dd {
-		margin-left: 0;
+	fieldset dd,
+	fieldset.fields1 dd,
+	fieldset.fields2 dd {
+		margin-inline-start: 0;
 	}
 
-	textarea, dd textarea, .message-box textarea {
+	textarea,
+	dd textarea,
+	.message-box textarea {
 		width: 100%;
-		-moz-box-sizing: border-box;
 		box-sizing: border-box;
 	}
 
@@ -339,14 +285,15 @@
 
 	dl.pmlist dd {
 		display: inline-block;
-		margin-left: 0 !important;
+		margin-inline-start: 0 !important;
 	}
 
 	dl.pmlist dd:first-of-type {
-		padding-left: 20px;
+		padding-inline-start: 20px;
 	}
 
-	.smiley-box, .message-box {
+	.smiley-box,
+	.message-box {
 		float: none;
 		width: auto;
 	}
@@ -359,7 +306,9 @@
 		display: none;
 	}
 
-	.colour-palette, .colour-palette tbody, .colour-palette tr {
+	.colour-palette,
+	.colour-palette tbody,
+	.colour-palette tr {
 		display: block;
 	}
 
@@ -368,7 +317,8 @@
 		margin-right: 2px;
 	}
 
-	.horizontal-palette td:nth-child(2n), .vertical-palette tr:nth-child(2n) {
+	.horizontal-palette td:nth-child(2n),
+	.vertical-palette tr:nth-child(2n) {
 		display: none;
 	}
 
@@ -386,18 +336,20 @@
 	fieldset.quick-login input.inputbox {
 		width: 85%;
 		max-width: 300px;
-		margin-left: 20px;
+		margin-inline-start: 20px;
 	}
 
 	fieldset.quick-login label[for="autologin"] {
 		display: inline-block;
-		text-align: right;
+		text-align: end;
 		min-width: 50%;
 	}
 
 	/* User profile
 	----------------------------------------*/
-	.column1, .column2, .left-box.profile-details {
+	.column1,
+	.column2,
+	.left-box.profile-details {
 		float: none;
 		width: auto;
 		clear: both;
@@ -414,14 +366,15 @@
 	}
 
 	fieldset.polls dd.resultbar {
-		padding-left: 20px;
+		padding-inline-start: 20px;
 	}
 
 	fieldset.polls dd.poll_option_percent {
 		width: 20%;
 	}
 
-	fieldset.polls dd.resultbar, fieldset.polls dd.poll_option_percent {
+	fieldset.polls dd.resultbar,
+	fieldset.polls dd.poll_option_percent {
 		margin-top: 5px;
 	}
 
@@ -431,7 +384,9 @@
 		position: inherit;
 	}
 
-	.postprofile, .postbody, .search .postbody {
+	.postprofile,
+	.postbody,
+	.search .postbody {
 		display: block;
 		width: auto;
 		float: none;
@@ -452,7 +407,10 @@
 		display: none;
 	}
 
-	.postprofile dt, .postprofile dd.profile-rank, .postprofile dd.profile-user-status, .search .postprofile dd {
+	.postprofile dt,
+	.postprofile dd.profile-rank,
+	.postprofile dd.profile-user-status,
+	.search .postprofile dd {
 		display: block;
 		margin: 0;
 	}
@@ -466,24 +424,18 @@
 		clear: none;
 	}
 
-	.postprofile .avatar {
-		margin-right: 5px;
-	}
-
 	.postprofile .avatar img,
 	.postprofile .avatar svg {
-		width: auto !important;
-		height: auto !important;
+		width: auto;
 		max-height: 32px;
 	}
 
 	.has-profile .postbody h3 {
-		margin-left: 0 !important;
-		margin-right: 0 !important;
+		margin-inline-end: 0;
 	}
 
 	.has-profile .post-buttons {
-		right: 30px;
+		inset-inline-end: 10px;
 		top: 15px;
 	}
 
@@ -513,7 +465,7 @@
 	}
 
 	dl.mini dd.pm-legend {
-		float: left;
+		float: inline-start;
 		min-width: 200px;
 	}
 
@@ -524,11 +476,6 @@
 
 	fieldset.display-actions {
 		white-space: normal;
-	}
-
-	.phpbb_alert {
-		width: auto;
-		margin: 0 5px;
 	}
 
 	.attach-comment dfn {
@@ -548,12 +495,14 @@
 	.postprofile dt,
 	.postprofile dd.profile-rank,
 	.postprofile dd.profile-user-status {
-	text-align: center;
+		text-align: center;
 	}
 }
 
 @media (min-width: 701px) and (max-width: 950px) {
-	dd.posts, dd.topics, dd.views {
+	dd.posts,
+	dd.topics,
+	dd.views {
 		width: 80px;
 	}
 }

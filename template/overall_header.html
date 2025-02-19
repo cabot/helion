@@ -43,12 +43,8 @@
 <link href="{{ T_FONT_AWESOME_LINK }}" rel="stylesheet">
 <link href="{{ T_STYLESHEET_LINK }}" rel="stylesheet">
 
-{% if S_CONTENT_DIRECTION eq 'rtl' %}
-	<link href="{{ T_THEME_PATH }}/bidi.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
-{% endif %}
-
 {% if S_PLUPLOAD %}
-	<link href="{{ ROOT_PATH }}styles/prosilver/theme/plupload.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
+	<link href="{{ T_THEME_PATH }}/plupload.css?assets_version={{ T_ASSETS_VERSION }}" rel="stylesheet">
 {% endif %}
 
 {% if S_COOKIE_NOTICE %}
@@ -81,15 +77,15 @@
 					{% if definition.LOGO_ONLY %}<h1 class="sr-only">{{ SITENAME }}</h1>{% endif %}
 				</a>
 				{% if not definition.LOGO_ONLY %}
-				<h1>{{ SITENAME }}</h1>
-				<p>{{ SITE_DESCRIPTION }}</p>
+				<h1 class="responsive-hide">{{ SITENAME }}</h1>
+				<p class="responsive-hide">{{ SITE_DESCRIPTION }}</p>
 				{% endif %}
 				<p class="skiplink"><a href="#start_here">{{ lang('SKIP') }}</a></p>
 			</div>
 
 			{% EVENT overall_header_searchbox_before %}
 			{% if S_DISPLAY_SEARCH and not S_IN_SEARCH %}
-			<div id="search-box" class="search-box search-header" role="search">
+			<div id="search-box" class="search-box search-header responsive-hide" role="search">
 				<form action="{{ U_SEARCH }}" method="get" id="search">
 				<fieldset>
 					<input name="keywords" id="keywords" type="search" maxlength="128" title="{{ lang('SEARCH_KEYWORDS') }}" class="inputbox search tiny" size="20" value="{{ SEARCH_WORDS }}" placeholder="{{ lang('SEARCH_MINI') }}" />
