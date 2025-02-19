@@ -1,24 +1,21 @@
 <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="gradient" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="hsla(0, 0%, 100%, 0.09)"/>
-      <stop offset="4%" stop-color="hsla(0, 0%, 100%, 0.18)"/>
-      <stop offset="79%" stop-color="hsla(0, 0%, 100%, 0.02)"/>
-      <stop offset="89%" stop-color="hsla(0, 0%, 100%, 0.01)"/>
-      <stop offset="93%" stop-color="hsla(0, 0%, 0%, 0.01)"/>
-      <stop offset="100%" stop-color="hsla(0, 0%, 0%, 0)"/>
-    </linearGradient>
-  </defs>
+	<defs>
+		<linearGradient id="gradient" x1="0" y1="0" x2="0" y2="1">
+			<stop offset="0%" stop-color="hsla(0, 0%, 100%, 0.09)" />
+			<stop offset="4%" stop-color="hsla(0, 0%, 100%, 0.18)" />
+			<stop offset="79%" stop-color="hsla(0, 0%, 100%, 0.02)" />
+			<stop offset="89%" stop-color="hsla(0, 0%, 100%, 0.01)" />
+			<stop offset="93%" stop-color="hsla(0, 0%, 0%, 0.01)" />
+			<stop offset="100%" stop-color="hsla(0, 0%, 0%, 0)" />
+		</linearGradient>
+	</defs>
 
-  <!-- Barre rouge (petite, à gauche, largeur 20) -->
-  <path fill="#dd2e44" d="M0 64 H20 V26 H0 z" opacity="1"/>
-  <path fill="url(#gradient)" d="M0 64 H20 V26 H0 z"/>
-  
-  <!-- Barre verte (centrée, largeur 20) -->
-  <path fill="#5c913b" d="M22 64 h20 V0 h-20 z" opacity="1"/>
-  <path fill="url(#gradient)" d="M22 64 h20 V0 h-20 z"/>
-  
-  <!-- Barre bleue (à droite, largeur 20) -->
-  <path fill="#3b94d9" d="M44 64 h20 V14 h-20 z" opacity="1"/>
-  <path fill="url(#gradient)" d="M44 64 h20 V14 h-20 z"/>
+	<path fill="#dd2e44" d="M0 64 H20 V26 H0 z"/>
+	<path fill="url(#gradient)" d="M0 64 H20 V26 H0 z"/>
+
+	<path fill="#5c913b" d="M22 64 h20 V0 h-20 z"/>
+	<path fill="url(#gradient)" d="M22 64 h20 V0 h-20 z"/>
+
+	<path fill="#3b94d9" d="M44 64 h20 V14 h-20 z"/>
+	<path fill="url(#gradient)" d="M44 64 h20 V14 h-20 z"/>
 </svg>

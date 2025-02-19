@@ -1,0 +1,95 @@
+.attach-panel-multi {
+	display: none;
+	margin-bottom: 1em;
+}
+
+.attach-row-tpl {
+	display: none;
+}
+
+.file-list td {
+	vertical-align: middle;
+}
+
+.attach-name {
+	width: 50%;
+}
+
+.attach-comment {
+	width: 30%;
+}
+
+.attach-comment .inputbox {
+	resize: vertical;
+	width: 100%;
+}
+
+.attach-filesize {
+	width: 15%;
+}
+
+.attach-status {
+	width: 5%;
+}
+
+.attach-filesize,
+.attach-status {
+	text-align: center;
+}
+
+.attach-controls {
+	display: inline-block;
+	float: inline-end;
+}
+
+.nojs .file-inline-bbcode {
+	display: none;
+}
+
+.file-total-progress {
+	height: 2px;
+	display: block;
+	position: relative;
+	margin: 4px -10px -6px -10px;
+}
+
+.file-progress {
+	background-color: #CCCCCC;
+	display: inline-block;
+	height: 8px;
+	width: 50px;
+}
+
+.file-progress-bar,
+.file-total-progress-bar {
+	background-color: green;
+	display: block;
+	height: 100%;
+	width: 0;
+}
+
+.file-status {
+	--statut-bg-size: 20px;
+	background: var(--statut-bg, none) no-repeat 0 / contain;
+	display: inline-block;
+	height: var(--statut-bg-size);
+	width: var(--statut-bg-size);
+}
+
+
+.file-status.file-working {
+	--statut-bg: url("./images/loading.svg");
+}
+
+.file-status.file-uploaded {
+	--statut-bg: url("./images/done.svg");
+}
+
+.file-status.file-error {
+	--statut-bg: url("./images/error.svg");
+}
+
+.file-name {
+	max-width: 65%;
+	vertical-align: bottom;
+}

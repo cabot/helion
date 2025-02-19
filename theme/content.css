@@ -1,9 +1,3 @@
-.rtl {
-	--content-flow-start: right;
-	--content-flow-end: left;
-	--scale-x: scaleX(-1);
-}
-
 /* Content Styles
 ---------------------------------------- */
 
@@ -25,10 +19,6 @@ ul.topiclist dl {
 	align-items: center;
 }
 
-ul.topiclist li.row dl {
-	/* margin: 2px 0; */
-}
-
 ul.topiclist dt {
 	font-size: 1.1em;
 	flex: 1;
@@ -44,8 +34,6 @@ ul.topiclist dt .list-inner {
 ul.topiclist dd {
 	border-inline-start: 1px solid transparent;
 	padding: 4px 0;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -57,14 +45,14 @@ ul.topiclist dfn {
 .panel-container ul.topiclist dfn {
 	/* Labels for post/view counts */
 	position: absolute;
-	left: -999px;
+	inset-inline-start: -999px;
 	width: 990px;
 }
 
 .forum-image {
-	float: left;
+	float: inline-start;
 	padding-top: 5px;
-	margin-right: 5px;
+	margin-inline-end: 5px;
 }
 
 .forum-image img {
@@ -75,10 +63,11 @@ li.row strong {
 	font-weight: normal;
 }
 
-li.header dt, li.header dd {
+li.header dt,
+li.header dd {
 	line-height: 1.6em;
-	border-left-width: 0;
-	margin: 2px 0 4px 0;
+	border: none;
+	margin: 2px 0 4px;
 	padding-top: 2px;
 	padding-bottom: 2px;
 	font-size: 1.2em;
@@ -91,31 +80,14 @@ li.header dt {
 	text-align: center;
 }
 
-li.header dt .list-inner {
-
-}
-
-li.header dd {
-	border: none;
-}
-
-li.header dl.row-item dt, li.header dl.row-item dd {
+li.header dl.row-item dt,
+li.header dl.row-item dd {
 	min-height: 0;
 }
 
 /* Forum list column styles */
-.row .list-inner { padding: 4px 0; }
-
-dl.row-item {
-	background-position: 10px 50%;		/* Position of folder icon */
-	background-repeat: no-repeat;
-	background-size: 32px;
-}
-
-dl.row-item dt {
-	background-repeat: no-repeat;
-	background-position: 5px 95%;		/* Position of topic icon */
-	background-size: 17px;
+.row .list-inner {
+	padding: 4px 0;
 }
 
 dl.row-item dt .list-inner {
@@ -123,7 +95,8 @@ dl.row-item dt .list-inner {
 	padding-inline-start: 0;
 }
 
-dl.row-item dt, dl.row-item dd {
+dl.row-item dt,
+dl.row-item dd {
 	min-height: 35px;
 }
 
@@ -131,19 +104,7 @@ dl.row-item dt a {
 	display: inline;
 }
 
-dl a.row-item-link {				/* topic row icon links */
-	display: block;
-	width: 30px;
-	height: 30px;
-	padding: 0;
-	position: absolute;
-	top: 50%;
-	left: 0;
-	margin-top: -15px;
-	margin-left: 9px;
-}
-
-dl.has-svg-icon dt .svgicon {
+dl.row-item dt .svgicon {
 	--folder-icon-size: 32px;
 	margin: 0 0.8em;
 	width: var(--folder-icon-size);
@@ -154,7 +115,7 @@ dl.has-svg-icon dt .svgicon {
 .folder-icon {
 	width: inherit;
 	height: inherit;
-	transform: var(--scale-x, none)
+	transform: var(--rtl-scale-x, none);
 }
 
 .topic-icon {
@@ -168,7 +129,11 @@ dl.has-svg-icon dt .svgicon {
 	background: no-repeat 0 0 / contain;
 }
 
-dd.posts, dd.topics, dd.views, dd.extra, dd.mark {
+dd.posts,
+dd.topics,
+dd.views,
+dd.extra,
+dd.mark {
 	width: 80px;
 	text-align: center;
 	line-height: 1.4em;
@@ -179,7 +144,9 @@ li.header dd.mark {
 	font-size: 1.1em;
 }
 
-dd.posts, dd.topics, dd.views {
+dd.posts,
+dd.topics,
+dd.views {
 	width: 95px;
 }
 
@@ -187,7 +154,7 @@ dd.posts, dd.topics, dd.views {
 dl.row-item dt ol,
 dl.row-item dt ul {
 	list-style-position: inside;
-	margin-left: 1em;
+	margin-inline-start: 1em;
 }
 
 dl.row-item dt li {
@@ -195,7 +162,11 @@ dl.row-item dt li {
 	list-style-type: inherit;
 }
 
-dd.lastpost, dd.redirect, dd.moderation, dd.time, dd.info {
+dd.lastpost,
+dd.redirect,
+dd.moderation,
+dd.time,
+dd.info {
 	width: 250px;
 	font-size: 1.1em;
 }
@@ -208,12 +179,17 @@ dd.time {
 	line-height: 200%;
 }
 
-dd.lastpost > span, ul.topiclist dd.info > span, ul.topiclist dd.time > span, dd.redirect > span, dd.moderation > span {
+dd.lastpost > span,
+ul.topiclist dd.info > span,
+ul.topiclist dd.time > span,
+dd.redirect > span,
+dd.moderation > span {
 	display: block;
 	padding-inline-start: 5px;
 }
 
-dd.extra, dd.mark {
+dd.extra,
+dd.mark {
 	line-height: 200%;
 }
 
@@ -230,7 +206,7 @@ dd.option {
 	padding: 0;
 	line-height: 1.48em;
 	width: 76%;
-	float: left;
+	float: inline-end;
 	position: relative;
 }
 
@@ -245,11 +221,11 @@ dd.option {
 
 .postbody h3 {
 	/* Postbody requires a different h3 format - so change it here */
-	float: left;
+	float: inline-start;
 	font-size: 1.5em;
 	padding: 2px 0 0 0;
-	margin-top: 0 !important;
-	margin-bottom: 0.3em !important;
+	margin-top: 0;
+	margin-bottom: 0.3em;
 	text-transform: none;
 	border: none;
 	font-family: "Trebuchet MS", Verdana, Helvetica, Arial, sans-serif;
@@ -262,8 +238,8 @@ dd.option {
 
 .has-profile .postbody h3 {
 	/* If there is a post-profile, we position the post-buttons differently */
-	float: none !important;
-	margin-right: 180px;
+	float: none;
+	margin-inline-end: 180px;
 }
 
 .postbody .content {
@@ -273,8 +249,6 @@ dd.option {
 
 .postbody img.postimage {
 	max-width: 100%;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -289,7 +263,7 @@ dd.option {
 }
 
 .topicreview {
-	padding-right: 5px;
+	padding-inline-end: 5px;
 	overflow: auto;
 	height: 300px;
 }
@@ -333,7 +307,8 @@ dd.option {
 	padding-bottom: 1px;
 }
 
-.content h2, .panel h2 {
+.content h2,
+.panel h2 {
 	font-weight: normal;
 	border-bottom: 1px solid transparent;
 	font-size: 1.6em;
@@ -391,8 +366,10 @@ dl.faq dt {
 	list-style-type: inherit;
 }
 
-.content ul, .content ol {
-	margin: 0.8em 0 0.9em 3em;
+.content ul,
+.content ol {
+	margin-block: 0.8em 0.9em;
+	margin-inline: 3em 0;
 }
 
 .posthilit {
@@ -415,7 +392,7 @@ p.author {
 	padding-top: 0.2em;
 	font-size: 1.1em;
 	border-top: 1px solid transparent;
-	clear: left;
+	clear: inline-start;
 	line-height: 140%;
 	overflow: hidden;
 	width: 100%;
@@ -437,8 +414,10 @@ dd .signature {
 	list-style-type: inherit;
 }
 
-.signature ul, .signature ol {
-	margin: 0.8em 0 0.9em 3em;
+.signature ul,
+.signature ol {
+	margin-block: 0.8em 0.9em;
+	margin-inline: 3em 0;
 }
 
 /* Post noticies */
@@ -449,14 +428,14 @@ dd .signature {
 	padding-top: 0.2em;
 	font-size: 1em;
 	border-top: 1px dashed transparent;
-	clear: left;
+	clear: inline-start;
 	line-height: 130%;
 }
 
 /* Jump to post link for now */
 ul.searchresults {
 	list-style: none;
-	text-align: right;
+	text-align: end;
 	clear: both;
 }
 
@@ -466,7 +445,8 @@ ul.searchresults {
 blockquote {
 	border: 1px solid transparent;
 	font-size: 0.95em;
-	margin: 1em 1px 1em 25px;
+	margin-block: 1em;
+	margin-inline: 25px 1px;
 	overflow: hidden;
 	padding: 5px;
 }
@@ -474,7 +454,7 @@ blockquote {
 blockquote blockquote {
 	/* Nested quotes */
 	font-size: 1em;
-	margin: 1em 1px 1em 15px;
+	margin-inline: 15px 1px;
 }
 
 blockquote cite {
@@ -489,12 +469,13 @@ blockquote cite cite {
 	font-size: 1em;
 }
 
-blockquote cite:before, .uncited:before {
-	padding-right: 5px;
+blockquote cite:before,
+.uncited:before {
+	padding-inline-end: 5px;
 }
 
 blockquote cite > span {
-	float: right;
+	float: inline-end;
 	font-weight: normal;
 }
 
@@ -521,33 +502,34 @@ blockquote cite > span {
 	display: block;
 }
 
-blockquote .codebox {
-	margin-left: 0;
-}
-
 .codebox code {
 	overflow: auto;
 	display: block;
 	height: auto;
 	max-height: 200px;
 	padding: 5px 3px;
-	font: 0.9em Monaco, "Andale Mono","Courier New", Courier, monospace;
+	font: 0.9em Monaco, "Andale Mono", "Courier New", Courier, monospace;
 	line-height: 1.3em;
+}
+
+pre,
+code {
+	direction: ltr;
 }
 
 /* Attachments
 ----------------------------------------*/
 .attachbox {
 	font-size: 13px;
-	float: left;
+	float: inline-start;
 	width: auto;
 	max-width: 100%;
 	margin: 5px 5px 5px 0;
+	margin-block: 5px;
+	margin-inline: 0 5px;
 	padding: 6px;
 	border: 1px dashed transparent;
-	clear: left;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
+	clear: inline-start;
 	box-sizing: border-box;
 }
 
@@ -559,7 +541,7 @@ blockquote .codebox {
 .attachbox dd {
 	margin-top: 4px;
 	padding-top: 4px;
-	clear: left;
+	clear: inline-start;
 	border-top: 1px solid transparent;
 	overflow-x: auto;
 	overflow-y: hidden;
@@ -572,13 +554,13 @@ blockquote .codebox {
 .attachbox p {
 	line-height: 110%;
 	font-weight: normal;
-	clear: left;
+	clear: inline-start;
 }
 
 .attachbox p.stats {
 	line-height: 110%;
 	font-weight: normal;
-	clear: left;
+	clear: inline-start;
 }
 
 .attach-image {
@@ -592,7 +574,8 @@ blockquote .codebox {
 }
 
 /* Inline image thumbnails */
-div.inline-attachment dl.thumbnail, div.inline-attachment dl.file {
+div.inline-attachment dl.thumbnail,
+div.inline-attachment dl.file {
 	display: block;
 	margin-bottom: 4px;
 }
@@ -649,6 +632,8 @@ fieldset.polls dl {
 	border-top: 1px solid transparent;
 	padding: 5px 0 0 0;
 	line-height: 120%;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 fieldset.polls dl.voted {
@@ -656,22 +641,14 @@ fieldset.polls dl.voted {
 }
 
 fieldset.polls dt {
-	text-align: left;
-	float: left;
-	display: block;
 	width: 30%;
-	border-right: none;
-	padding: 0;
-	margin: 0;
 	font-size: 1.1em;
 }
 
 fieldset.polls dd {
-	float: left;
 	width: 10%;
-	border-left: none;
 	padding: 0 5px;
-	margin-left: 0;
+	margin-inline: 0 !important;
 	font-size: 1.1em;
 }
 
@@ -684,7 +661,7 @@ fieldset.polls dd input {
 }
 
 fieldset.polls dd div {
-	text-align: right;
+	text-align: end;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: bold;
 	padding: 2px 2px 0 2px;
@@ -692,9 +669,13 @@ fieldset.polls dd div {
 	min-width: 8px;
 }
 
-.pollbar1, .pollbar2, .pollbar3, .pollbar4, .pollbar5 {
+.pollbar1,
+.pollbar2,
+.pollbar3,
+.pollbar4,
+.pollbar5 {
 	border-bottom: 1px solid transparent;
-	border-right: 1px solid transparent;
+	border-inline-end: 1px solid transparent;
 }
 
 .vote-submitted {
@@ -708,29 +689,31 @@ fieldset.polls dd div {
 .postprofile {
 	margin: 5px 0 10px 0;
 	min-height: 80px;
-	border: 1px solid transparent;
-	border-width: 0 0 0 1px;
+	border-inline-end: 1px solid transparent;
+	border-bottom: 0 solid transparent;
 	width: 22%;
-	float: right;
-	display: inline;
+	float: inline-start;
 }
 
-.postprofile dd, .postprofile dt {
+.postprofile dd,
+.postprofile dt {
 	line-height: 1.2em;
-	margin-left: 8px;
+	margin-inline-end: 8px;
 }
 
 .profile-user-status span {
-    border-radius: var(--block-radius);
-    display: inline-block;
-    padding: .25em .5em;
-    text-transform: uppercase;
+	border-radius: var(--block-radius);
+	display: inline-block;
+	padding: .25em .5em;
+	text-transform: uppercase;
 	margin-bottom: 10px;
 	user-select: none;
 }
+
 .postprofile:has(.profile-user-status) .profile-rank {
 	margin-bottom: 0;
 }
+
 .postprofile dd {
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -740,7 +723,9 @@ fieldset.polls dd div {
 	font-weight: normal;
 }
 
-.postprofile dt.no-profile-rank, .postprofile dd.profile-rank, .postprofile .search-result-date {
+.postprofile dt.no-profile-rank,
+.postprofile dd.profile-rank,
+.postprofile .search-result-date {
 	margin-bottom: 10px;
 }
 
@@ -756,14 +741,13 @@ fieldset.polls dd div {
 
 .postprofile .avatar {
 	display: inline-block;
-	float: none;
 	max-width: 100%;
 }
 
 .postprofile .avatar img,
 .postprofile .avatar svg {
 	display: block;
-	height: auto !important;
+	height: auto;
 	max-width: 100%;
 }
 
@@ -817,31 +801,8 @@ dl.pmlist dt textarea {
 }
 
 dl.pmlist dd {
-	margin-left: 61% !important;
+	margin-inline-start: 61% !important;
 	margin-bottom: 2px;
-}
-
-.action-bar div.dl_links {
-	padding: 10px 0 0 10px;
-}
-
-div.dl_links {
-	display: inline-block;
-	text-transform: none;
-}
-
-.dl_links strong {
-	font-weight: bold;
-}
-
-.dl_links ul {
-	list-style-type: none;
-	margin: 0;
-	display: inline-block;
-}
-
-.dl_links li {
-	display: inline-block;
 }
 
 .attachment-filename {
@@ -861,7 +822,13 @@ table.fixed-width-table {
 
 /* Show scrollbars for items with overflow on iOS devices
 ----------------------------------------*/
-.postbody .content::-webkit-scrollbar, .topicreview::-webkit-scrollbar, .post_details::-webkit-scrollbar, .codebox code::-webkit-scrollbar, .attachbox dd::-webkit-scrollbar, .attach-image::-webkit-scrollbar, .dropdown-extended ul::-webkit-scrollbar {
+.postbody .content::-webkit-scrollbar,
+.topicreview::-webkit-scrollbar,
+.post_details::-webkit-scrollbar,
+.codebox code::-webkit-scrollbar,
+.attachbox dd::-webkit-scrollbar,
+.attach-image::-webkit-scrollbar,
+.dropdown-extended ul::-webkit-scrollbar {
 	width: 8px;
 	height: 8px;
 	-webkit-appearance: none;
@@ -869,12 +836,19 @@ table.fixed-width-table {
 	border-radius: 3px;
 }
 
-.postbody .content::-webkit-scrollbar-thumb, .topicreview::-webkit-scrollbar-thumb, .post_details::-webkit-scrollbar-thumb, .codebox code::-webkit-scrollbar-thumb, .attachbox dd::-webkit-scrollbar-thumb, .attach-image::-webkit-scrollbar-thumb, .dropdown-extended ul::-webkit-scrollbar-thumb {
+.postbody .content::-webkit-scrollbar-thumb,
+.topicreview::-webkit-scrollbar-thumb,
+.post_details::-webkit-scrollbar-thumb,
+.codebox code::-webkit-scrollbar-thumb,
+.attachbox dd::-webkit-scrollbar-thumb,
+.attach-image::-webkit-scrollbar-thumb,
+.dropdown-extended ul::-webkit-scrollbar-thumb {
 	background: rgba(0, 0, 0, .3);
 	border-radius: 3px;
 }
 
-#memberlist tr.inactive, #team tr.inactive {
+#memberlist tr.inactive,
+#team tr.inactive {
 	font-style: italic;
 }
 
@@ -884,6 +858,7 @@ table.fixed-width-table {
 	font-size: 1.3em;
 }
 
-.group-description ol, .group-description ul {
+.group-description ol,
+.group-description ul {
 	list-style-position: inside;
 }
