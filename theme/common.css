@@ -4,12 +4,6 @@ html {
 	font-size: 100%;
 }
 
-.rtl {
-	--content-flow-start: right;
-	--content-flow-end: left;
-	--rtl-scale-x: scaleX(-1);
-}
-
 body {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10px;

@@ -2,7 +2,7 @@
 --------------------------------------------------------------
 Colours and backgrounds for common.css
 -------------------------------------------------------------- */
-html {
+:root {
 	--logo-path: url("./images/logo.svg");
 	--logo-width: 149;
 	--logo-height: 52;
@@ -30,6 +30,12 @@ html {
 
 	--text-error: #bc2a2a;
 	--text-dark: #000000;
+}
+
+.rtl {
+	--text-shadow: -1px 1px 0 hsla(0, 0%, 0%, 0.2);
+	--content-flow-start: right;
+	--rtl-scale-x: scaleX(-1);
 }
 
 html,
