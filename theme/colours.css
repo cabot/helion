@@ -1328,7 +1328,7 @@ th:hover,
 	position: absolute;
 	padding-top: 1px;
 	top: 100%;
-	inset-inline-start: 50%;
+	left: 50%;
 	transform: translateX(-50%);
 	width: clamp(270px, 20vw, 320px);
 	z-index: 999;
