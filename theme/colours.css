@@ -1176,8 +1176,12 @@ input.disabled {
 	border-top-color: var(--primary-color);
 }
 
+.dropdown-extended .bg2 {
+	background-color: hsl(var(--primary-hue), var(--primary-saturation), 94%);
+}
+
 .dropdown-extended ul li:hover {
-	background-color: #CFE1F6;
+	background-color: hsl(var(--primary-hue), var(--primary-saturation), 88%);
 	color: var(--text-dark);
 }
 
