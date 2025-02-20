@@ -1379,3 +1379,11 @@ th:hover,
 	border: var(--block-border);
 	box-shadow: var(--block-shadow);
 }
+
+/* Extensions
+---------------------------------------------------------------------------- */
+/* Collapsible Forum Categories */
+.helion .collapse-btn {
+	margin-inline: 0 8px;
+	margin-top: -22px;
+}
