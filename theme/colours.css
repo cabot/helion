@@ -333,17 +333,7 @@ a:hover .icon.icon-black {
 .copyright {
 	background: var(--primary-color) var(--common-gradient);
 	color: var(--contrast-color);
-	margin: auto 8px;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	gap: .5em;
 	box-shadow: 0 -1px 2px hsla(0, 0%, 0%, 0.4);
-}
-
-.footer-row {
-	line-height: 1;
-	overflow: revert;
 }
 
 .copyright a {
@@ -1292,7 +1282,6 @@ th:hover,
 
 .time {
 	color: rgba(0, 0, 0, 0.5);
-	text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
 }
 
 /* Header login

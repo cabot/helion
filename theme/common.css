@@ -2,6 +2,8 @@
 ---------------------------------------- */
 html {
 	font-size: 100%;
+	--side-spacing: 8px;
+	--calc-margin-inline: clamp(0px, (100vw - 700px) * 9999, var(--side-spacing));
 }
 
 body {
@@ -142,9 +144,8 @@ a:hover {
 /* Main blocks
 ---------------------------------------- */
 .wrapper {
-	--side-spacing: 8px;
 	flex: 1 0 auto;
-	margin: 0 var(--side-spacing);
+	margin: 0 var(--calc-margin-inline);
 	min-width: calc(320px - var(--side-spacing) * 2);
 }
 
@@ -1045,12 +1046,18 @@ only screen and (max-device-width: 500px) {
 	font-size: 10px;
 	text-align: center;
 	padding: 10px;
+	margin: auto var(--calc-margin-inline);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: .5em;
 }
 
 .footer-row {
 	font-size: 10px;
-	line-height: 1.8;
+	line-height: 1;
 	margin: 0;
+	overflow: revert;
 }
 
 .small {
