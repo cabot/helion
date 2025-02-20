@@ -646,6 +646,11 @@ a.header-avatar span:after {
 
 /* Table styles
 ----------------------------------------*/
+table {
+	border-collapse: revert;
+	border-spacing: revert;
+}
+
 table.table1 {
 	width: 100%;
 }

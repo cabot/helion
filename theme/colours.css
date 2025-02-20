@@ -181,10 +181,6 @@ ul.navlinks {
 
 /* Table styles
 ----------------------------------------*/
-table {
-	border-collapse: revert;
-	border-spacing: revert;
-}
 
 table.table1 thead th {
 	color: var(--contrast-color);
@@ -298,13 +294,13 @@ a:hover .icon.icon-black {
 .jumpbox-cat-link {
 	background: var(--primary-color) var(--common-gradient);
 	border-top-color: var(--primary-color);
-	color: #FFFFFF;
+	color: var(--contrast-color);
 }
 
 .jumpbox-cat-link:hover {
 	background-color: var(--secondary-color);
 	border-top-color: var(--secondary-color);
-	color: #FFFFFF;
+	color: var(--contrast-color);
 }
 
 .jumpbox-forum-link {
@@ -363,11 +359,6 @@ a:hover .icon.icon-black {
 
 li.row.reported:hover {
 	background-color: #f4e9e9;
-}
-
-.sticky,
-.announce {
-	/* you can add a background for stickies and announcements*/
 }
 
 div.rules {
@@ -457,11 +448,6 @@ dl.faq dt {
 .posthilit {
 	background-color: #F3BFCC;
 	color: #BC2A4D;
-}
-
-.announce,
-.unreadpost {
-	/* Highlight the announcements & unread posts box */
 }
 
 /* Post signature */
@@ -679,7 +665,6 @@ Colours and backgrounds for buttons.css
 .pagination li a {
 	background: var(--primary-color) var(--common-gradient);
 	color: var(--contrast-color);
-	;
 	border-color: var(--primary-color);
 	box-shadow: none;
 }
