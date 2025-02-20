@@ -147,6 +147,13 @@ a:hover {
 
 /* Main blocks
 ---------------------------------------- */
+.wrapper {
+	--side-spacing: 8px;
+	flex: 1 0 auto;
+	margin: 0 var(--side-spacing);
+	min-width: calc(320px - var(--side-spacing) * 2);
+}
+
 .wrap {
 	margin: 0 auto;
 	padding: 8px;
