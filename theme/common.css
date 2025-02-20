@@ -2,12 +2,8 @@
 ---------------------------------------- */
 html {
 	font-size: 100%;
-}
-
-.rtl {
-	--content-flow-start: right;
-	--content-flow-end: left;
-	--rtl-scale-x: scaleX(-1);
+	--side-spacing: 8px;
+	--calc-margin-inline: clamp(0px, (100vw - 700px) * 9999, var(--side-spacing));
 }
 
 body {
@@ -147,6 +143,12 @@ a:hover {
 
 /* Main blocks
 ---------------------------------------- */
+.wrapper {
+	flex: 1 0 auto;
+	margin: 0 var(--calc-margin-inline);
+	min-width: calc(320px - var(--side-spacing) * 2);
+}
+
 .wrap {
 	margin: 0 auto;
 	padding: 8px;
@@ -644,6 +646,11 @@ a.header-avatar span:after {
 
 /* Table styles
 ----------------------------------------*/
+table {
+	border-collapse: revert;
+	border-spacing: revert;
+}
+
 table.table1 {
 	width: 100%;
 }
@@ -1044,12 +1051,26 @@ only screen and (max-device-width: 500px) {
 	font-size: 10px;
 	text-align: center;
 	padding: 10px;
+	margin: 0;
+}
+
+.copyright:empty {
+	display: none;
+}
+
+.footer-bar {
+	margin: auto var(--calc-margin-inline);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: .5em;
 }
 
 .footer-row {
 	font-size: 10px;
-	line-height: 1.8;
+	line-height: 1;
 	margin: 0;
+	overflow: revert;
 }
 
 .small {
@@ -1196,7 +1217,6 @@ ul.linklist:after,
 	font-family: Arial, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: bold;
 	text-align: start;
-	text-shadow: 1px 1px 1px white;
 	text-transform: uppercase;
 	line-height: 3em;
 	border-bottom: 1px solid;
