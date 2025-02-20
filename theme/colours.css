@@ -330,18 +330,26 @@ a:hover .icon.icon-black {
 /* Miscellaneous styles
 ---------------------------------------- */
 
-.copyright {
+.footer-bar {
 	background: var(--primary-color) var(--common-gradient);
 	color: var(--contrast-color);
 	box-shadow: 0 -1px 2px hsla(0, 0%, 0%, 0.4);
 }
 
-.copyright a {
+.footer-bar .footer-row {
+	opacity: 0.7;
+	transition: opacity 0.25s ease-in-out;
+}
+
+.footer-bar:hover .footer-row {
+	opacity: 1;
+}
+
+.footer-bar a {
 	color: var(--contrast-color);
 }
 
 .phpbb-group {
-	opacity: .5;
 	width: clamp(35px, 10vw, 55px);
 }
 

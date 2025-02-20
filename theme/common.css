@@ -1046,6 +1046,14 @@ only screen and (max-device-width: 500px) {
 	font-size: 10px;
 	text-align: center;
 	padding: 10px;
+	margin: 0;
+}
+
+.copyright:empty {
+	display: none;
+}
+
+.footer-bar {
 	margin: auto var(--calc-margin-inline);
 	display: flex;
 	align-items: center;
