@@ -1290,6 +1290,7 @@ th:hover,
 	background: var(--primary-color) var(--common-gradient);
 	padding: 8px 0;
 	margin-bottom: 2px;
+	position: relative;
 	transition: var(--transition-bg);
 	box-shadow: var(--box-shadow);
 }
@@ -1306,7 +1307,6 @@ th:hover,
 	justify-content: center;
 	gap: 1em;
 	list-style: none;
-	position: relative;
 }
 
 .header-menu-link {
