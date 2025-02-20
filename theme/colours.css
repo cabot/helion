@@ -1309,9 +1309,6 @@ th:hover,
 	justify-content: center;
 	gap: 1em;
 	list-style: none;
-}
-
-.header-login-list-item {
 	position: relative;
 }
 
@@ -1334,7 +1331,7 @@ th:hover,
 	position: absolute;
 	padding-top: 10px;
 	top: 100%;
-	left: 50%;
+	inset-inline-start: 50%;
 	transform: translateX(-50%);
 	width: clamp(270px, 20vw, 320px);
 	z-index: 999;
