@@ -452,7 +452,8 @@ dl.faq dt {
 
 /* Post signature */
 .signature {
-	border-top-color: #CCCCCC;
+	border-top-color: #e8e8e8;
+		color: #444;
 }
 
 /* Post noticies */
