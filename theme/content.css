@@ -712,9 +712,14 @@ fieldset.polls dd div {
 	user-select: none;
 }
 
+.postprofile dt a {
+	font-size: 1.6em;
+}
+
 .postprofile dd {
 	overflow: hidden;
 	text-overflow: ellipsis;
+	font-size: 11px;
 }
 
 .postprofile strong {
@@ -807,6 +812,10 @@ dl.pmlist dd {
 
 .attachment-filename {
 	width: 100%;
+}
+
+.attach-controls input {
+	margin-block-end: 5px;
 }
 
 .ellipsis-text {
