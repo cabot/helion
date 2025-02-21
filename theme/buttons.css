@@ -129,6 +129,11 @@
 	padding-inline: 3px;
 }
 
+.format-buttons .button{
+	margin-block: 3px;
+	font-weight: normal;
+}
+
 .hastouch .post-buttons {
 	margin-inline-end: 10px;
 }

@@ -373,8 +373,9 @@ div.rules:hover {
 }
 
 p.post-notice {
-	background-color: #ECD5D8;
+	background-color: #f6e7e7;
 	background-image: none;
+	border: 1px solid #eadada;
 }
 
 /*
@@ -452,7 +453,8 @@ dl.faq dt {
 
 /* Post signature */
 .signature {
-	border-top-color: #CCCCCC;
+	border-top-color: #e8e8e8;
+	color: #444;
 }
 
 /* Post noticies */
@@ -464,43 +466,53 @@ dl.faq dt {
 ----------------------------------------*/
 /* Quote block */
 blockquote {
-	background-color: #EBEADD;
-	border-color: #DBDBCE;
+	background-color: #f4f4f4;
+	border-color: #e0e0e0;
+	color: #606060;
 }
 
 blockquote blockquote {
 	/* Nested quotes */
-	background-color: #EFEED9;
+	background-color: #f8f8f8;
 }
 
 blockquote blockquote blockquote {
 	/* Nested quotes */
-	background-color: #EBEADD;
+	background-color: #f8f8f8;
+}
+
+blockquote cite {
+	color: var(--text-dark)
 }
 
 /* Code block */
 .codebox {
-	background-color: #FFFFFF;
-	border-color: #C9D2D8;
+	background-color: #f4f4f4;
+	border-color: #e0e0e0;
 }
 
 .codebox p {
 	border-bottom-color: #CCCCCC;
+	color: #606060;
 }
 
 .codebox code {
-	color: #2E8B57;
+	color: var(--text-dark);
 }
 
 /* Attachments
 ----------------------------------------*/
 .attachbox {
-	background-color: #FFFFFF;
-	border-color: #C9D2D8;
+	background-color: #f4f4f4;
+	border-color: #e0e0e0;
 }
 
 .pm-message .attachbox {
 	background-color: #F2F3F3;
+}
+
+.attachbox dt {
+	color: #606060;
 }
 
 .attachbox dd {
@@ -517,6 +529,11 @@ blockquote blockquote blockquote {
 
 .attach-image img {
 	border-color: #999999;
+}
+
+.inline-attachment {
+	background-color: #f4f4f4;
+	border-color: #e0e0e0;
 }
 
 /* Inline image thumbnails */
@@ -608,6 +625,10 @@ dd.profile-warnings {
 	color: #BC2A4D;
 }
 
+.profile-rank {
+	color: #888888;
+}
+
 /*
 --------------------------------------------------------------
 Colours and backgrounds for buttons.css
@@ -646,6 +667,27 @@ Colours and backgrounds for buttons.css
 .post-buttons .button,
 .format-buttons .button {
 	box-shadow: none;
+}
+
+.format-buttons .button {
+	background-color: var(--block-background);
+	border: var(--block-border);
+	color: #808080;
+	text-shadow: none;
+}
+
+.format-buttons .button:hover {
+	background-color: var(--primary-color);
+	color: var(--contrast-color);
+}
+
+.format-buttons .button .icon {
+	color: #808080;
+
+}
+
+.format-buttons .button:hover .icon {
+	color: var(--contrast-color)
 }
 
 .caret {
@@ -817,36 +859,36 @@ ul.cplist {
 
 /* CP tabbed menu
 ----------------------------------------*/
-.tabs .tab > a {
+.tabs .tab>a {
 	background-color: var(--block-background);
 	border: var(--block-border);
 	border-radius: var(--block-radius);
 	transition: var(--transition-bg);
 }
 
-.tabs .tab > a:hover {
+.tabs .tab>a:hover {
 	background: var(--primary-color) var(--common-gradient);
 	color: var(--contrast-color);
 }
 
-.tabs .activetab > a,
-.tabs .activetab > a:hover {
+.tabs .activetab>a,
+.tabs .activetab>a:hover {
 	background: var(--primary-color) var(--common-gradient);
 	color: var(--contrast-color);
 }
 
-.tabs .activetab > a:hover {
+.tabs .activetab>a:hover {
 	background-color: var(--secondary-color);
 }
 
 /* Mini tabbed menu used in MCP
 ----------------------------------------*/
-.minitabs .tab > a {
+.minitabs .tab>a {
 	background-color: #E1EBF2;
 }
 
-.minitabs .activetab > a,
-.minitabs .activetab > a:hover {
+.minitabs .activetab>a,
+.minitabs .activetab>a:hover {
 	background-color: #F9F9F9;
 	color: #333333;
 }
@@ -1327,7 +1369,7 @@ th:hover,
 	z-index: 999;
 }
 
-.menu-login:hover + .header-login-popup,
+.menu-login:hover+.header-login-popup,
 .header-login-popup:hover,
 .header-login-popup:focus-within {
 	opacity: 1;
