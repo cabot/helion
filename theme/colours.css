@@ -503,12 +503,16 @@ blockquote cite {
 /* Attachments
 ----------------------------------------*/
 .attachbox {
-	background-color: #FFFFFF;
-	border-color: #C9D2D8;
+	background-color: #f4f4f4;
+	border-color: #e0e0e0;
 }
 
 .pm-message .attachbox {
 	background-color: #F2F3F3;
+}
+
+.attachbox dt {
+	color: #606060;
 }
 
 .attachbox dd {
@@ -525,6 +529,11 @@ blockquote cite {
 
 .attach-image img {
 	border-color: #999999;
+}
+
+.inline-attachment {
+	background-color: #f4f4f4;
+	border-color: #e0e0e0;
 }
 
 /* Inline image thumbnails */

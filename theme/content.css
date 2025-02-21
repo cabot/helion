@@ -179,11 +179,11 @@ dd.time {
 	line-height: 200%;
 }
 
-dd.lastpost > span,
-ul.topiclist dd.info > span,
-ul.topiclist dd.time > span,
-dd.redirect > span,
-dd.moderation > span {
+dd.lastpost>span,
+ul.topiclist dd.info>span,
+ul.topiclist dd.time>span,
+dd.redirect>span,
+dd.moderation>span {
 	display: block;
 	padding-inline-start: 5px;
 }
@@ -474,7 +474,7 @@ blockquote cite:before,
 	padding-inline-end: 5px;
 }
 
-blockquote cite > span {
+blockquote cite>span {
 	float: inline-end;
 	font-weight: normal;
 }
@@ -521,14 +521,11 @@ code {
 ----------------------------------------*/
 .attachbox {
 	font-size: 13px;
-	float: inline-start;
 	width: auto;
 	max-width: 100%;
-	margin: 5px 5px 5px 0;
-	margin-block: 5px;
-	margin-inline: 0 5px;
+	margin: 5px 20px;
 	padding: 6px;
-	border: 1px dashed transparent;
+	border: 1px solid transparent;
 	clear: inline-start;
 	box-sizing: border-box;
 }
@@ -582,6 +579,12 @@ div.inline-attachment dl.file {
 
 div.inline-attachment p {
 	font-size: 100%;
+}
+
+.inline-attachment {
+	border: 1px solid transparent;
+	margin: 5px 20px;
+	padding: 4px;
 }
 
 dl.file {
