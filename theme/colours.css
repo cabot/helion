@@ -373,8 +373,9 @@ div.rules:hover {
 }
 
 p.post-notice {
-	background-color: #ECD5D8;
+	background-color: #f6e7e7;
 	background-image: none;
+	border: 1px solid #eadada;
 }
 
 /*
