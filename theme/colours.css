@@ -649,6 +649,26 @@ Colours and backgrounds for buttons.css
 	box-shadow: none;
 }
 
+.format-buttons .button{
+	background-color: var(--block-background);
+	border: var(--block-border);
+	color: #808080;
+	text-shadow: none;
+}
+
+.format-buttons .button:hover{
+	background-color: var(--primary-color);
+	color: var(--contrast-color);
+}
+
+.format-buttons .button .icon {
+	color: #808080;
+
+}
+.format-buttons .button:hover .icon {
+	color: var(--contrast-color)
+}
+
 .caret {
 	border-color: #C7C3BF;
 }
