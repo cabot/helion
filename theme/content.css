@@ -706,12 +706,7 @@ fieldset.polls dd div {
 	display: inline-block;
 	padding: .25em .5em;
 	text-transform: uppercase;
-	margin-bottom: 10px;
 	user-select: none;
-}
-
-.postprofile:has(.profile-user-status) .profile-rank {
-	margin-bottom: 0;
 }
 
 .postprofile dd {
@@ -723,12 +718,13 @@ fieldset.polls dd div {
 	font-weight: normal;
 }
 
-.postprofile dt.no-profile-rank,
-.postprofile dd.profile-rank,
 .postprofile .search-result-date {
 	margin-bottom: 10px;
 }
 
+.postprofile .profile-posts {
+	margin-block-start: 10px;
+}
 .profile-rank img {
 	max-width: 160px;
 }
