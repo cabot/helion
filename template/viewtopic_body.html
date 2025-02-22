@@ -140,7 +140,7 @@
 		<div class="inner">
 
 		<dl class="postprofile" id="profile{postrow.POST_ID}"<!-- IF postrow.S_POST_HIDDEN --> style="display: none;"<!-- ENDIF -->>
-			<dt class="<!-- IF postrow.RANK_TITLE or postrow.RANK_IMG -->has-profile-rank<!-- ELSE -->no-profile-rank<!-- ENDIF --> <!-- IF postrow.POSTER_AVATAR -->has-avatar<!-- ELSE -->no-avatar<!-- ENDIF -->">
+			<dt class="<!-- IF postrow.RANK_TITLE or postrow.RANK_IMG -->has-profile-rank<!-- ELSE -->no-profile-rank<!-- ENDIF --> has-avatar">
 				<div class="avatar-container">
 					<!-- EVENT viewtopic_body_avatar_before -->
 
@@ -178,7 +178,7 @@
 		<!-- IF not S_IS_BOT and .postrow.contact -->
 			<dd class="profile-contact">
 				<strong>{L_CONTACT}{L_COLON}</strong>
-				<div class="dropdown-container dropdown-left">
+				<div class="dropdown-container">
 					<a href="#" class="dropdown-trigger" title="{postrow.CONTACT_USER}">
 						<i class="icon fa-commenting-o fa-fw icon-lg" aria-hidden="true"></i><span class="sr-only">{postrow.CONTACT_USER}</span>
 					</a>
@@ -192,7 +192,9 @@
 									<div>
 								<!-- ENDIF -->
 									<a href="<!-- IF postrow.contact.U_CONTACT -->{postrow.contact.U_CONTACT}<!-- ELSE -->{postrow.U_POST_AUTHOR}<!-- ENDIF -->" title="{postrow.contact.NAME}"<!-- IF $S_LAST_CELL --> class="last-cell"<!-- ENDIF --><!-- IF postrow.contact.ID eq 'jabber' --> onclick="popup(this.href, 750, 320); return false;"<!-- ENDIF -->>
-										{% EVENT viewtopic_body_contact_icon_prepend %}<span class="contact-icon {postrow.contact.ID}-icon">{postrow.contact.NAME}</span>{% EVENT viewtopic_body_contact_icon_append %}
+										{% EVENT viewtopic_body_contact_icon_prepend %}
+										{{ include('svgicons/contact/' ~ postrow.contact.ID ~ '-icon.svg', { 'aria_label': postrow.contact.NAME }, ignore_missing = true) ?: include('svgicons/contact/link-icon.svg', { 'aria_label': postrow.contact.NAME }, ignore_missing = true) }}
+										{% EVENT viewtopic_body_contact_icon_append %}
 									</a>
 								<!-- IF REMAINDER eq 3 or postrow.contact.S_LAST_ROW -->
 									</div>

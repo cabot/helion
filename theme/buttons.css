@@ -87,8 +87,6 @@
 .contact-icons a {
 	border-bottom: 1px dotted;
 	border-inline-end: 1px dotted;
-	display: block;
-	float: inline-start;
 	padding: 8px;
 }
 
@@ -101,7 +99,7 @@
 }
 
 .contact-icons div {
-	clear: inline-start;
+	display: flex;
 }
 
 /* Post control buttons
