@@ -25,7 +25,7 @@
 			<dl class="row-item {{ forumrow.FORUM_IMG_STYLE }} has-svg-icon">
 				<dt>
 					<a href="{{ forumrow.U_VIEWFORUM }}" class="svgicon svgicon-link">
-						{{ include('svgicons/' ~ forumrow.FORUM_IMG_STYLE ~ '.svg', {
+						{{ include('svg/marker/' ~ forumrow.FORUM_IMG_STYLE ~ '.svg', {
 							'aria_label': forumrow.FORUM_NAME
 						}, ignore_missing = true) }}
 					</a>
@@ -84,7 +84,7 @@
 			<dl class="row-item {{ topicrow.TOPIC_IMG_STYLE }} has-svg-icon">
 				<dt title="{{ topicrow.TOPIC_FOLDER_IMG_ALT }}">
 					<a href="{{ topicrow.S_UNREAD_TOPIC ? topicrow.U_NEWEST_POST : topicrow.U_VIEW_TOPIC }}" class="svgicon svgicon-link"{% if topicrow.S_UNREAD_TOPIC %} title="{{ lang('VIEW_NEWEST_POST') }}"{% endif %}>
-						{{ include('svgicons/' ~ topicrow.TOPIC_IMG_STYLE ~ '.svg', {
+						{{ include('svg/marker/' ~ topicrow.TOPIC_IMG_STYLE ~ '.svg', {
 							'aria_label': topicrow.TOPIC_TITLE ~ (topicrow.S_UNREAD_TOPIC ? (' - ' ~ lang('VIEW_NEWEST_POST')))
 						}, ignore_missing = true) }}
 						{% if topicrow.TOPIC_ICON_IMG %}<span class="topic-icon" style="background-image: url({{ T_ICONS_PATH ~ topicrow.TOPIC_ICON_IMG }});" aria-hidden="true"></span>{% endif %}
