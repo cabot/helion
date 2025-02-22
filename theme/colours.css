@@ -859,36 +859,36 @@ ul.cplist {
 
 /* CP tabbed menu
 ----------------------------------------*/
-.tabs .tab>a {
+.tabs .tab > a {
 	background-color: var(--block-background);
 	border: var(--block-border);
 	border-radius: var(--block-radius);
 	transition: var(--transition-bg);
 }
 
-.tabs .tab>a:hover {
+.tabs .tab > a:hover {
 	background: var(--primary-color) var(--common-gradient);
 	color: var(--contrast-color);
 }
 
-.tabs .activetab>a,
-.tabs .activetab>a:hover {
+.tabs .activetab > a,
+.tabs .activetab > a:hover {
 	background: var(--primary-color) var(--common-gradient);
 	color: var(--contrast-color);
 }
 
-.tabs .activetab>a:hover {
+.tabs .activetab > a:hover {
 	background-color: var(--secondary-color);
 }
 
 /* Mini tabbed menu used in MCP
 ----------------------------------------*/
-.minitabs .tab>a {
+.minitabs .tab > a {
 	background-color: #E1EBF2;
 }
 
-.minitabs .activetab>a,
-.minitabs .activetab>a:hover {
+.minitabs .activetab > a,
+.minitabs .activetab > a:hover {
 	background-color: #F9F9F9;
 	color: #333333;
 }
@@ -1369,7 +1369,7 @@ th:hover,
 	z-index: 999;
 }
 
-.menu-login:hover+.header-login-popup,
+.menu-login:hover + .header-login-popup,
 .header-login-popup:hover,
 .header-login-popup:focus-within {
 	opacity: 1;

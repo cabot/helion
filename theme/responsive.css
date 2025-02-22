@@ -278,13 +278,7 @@
 	}
 
 	dl.pmlist dt {
-		width: auto !important;
 		margin-bottom: 5px;
-	}
-
-	dl.pmlist dd {
-		display: inline-block;
-		margin-inline-start: 0 !important;
 	}
 
 	dl.pmlist dd:first-of-type {

@@ -92,12 +92,12 @@ blockquote cite:before,
 
 blockquote cite:before,
 .uncited:before {
-	content: '\f10d';
+	content: var(--blockquote-icon, '\f10d');
 	/* Font Awesome quote-left */
 }
 
-.rtl blockquote cite:before,
-.rtl .uncited:before {
-	content: '\f10e';
+.rtl blockquote {
+	--blockquote-icon: '\f10e';
 	/* Font Awesome quote-right */
 }
+

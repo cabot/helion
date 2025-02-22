@@ -179,11 +179,11 @@ dd.time {
 	line-height: 200%;
 }
 
-dd.lastpost>span,
-ul.topiclist dd.info>span,
-ul.topiclist dd.time>span,
-dd.redirect>span,
-dd.moderation>span {
+dd.lastpost > span,
+ul.topiclist dd.info > span,
+ul.topiclist dd.time > span,
+dd.redirect > span,
+dd.moderation > span {
 	display: block;
 	padding-inline-start: 5px;
 }
@@ -474,7 +474,7 @@ blockquote cite:before,
 	padding-inline-end: 5px;
 }
 
-blockquote cite>span {
+blockquote cite > span {
 	float: inline-end;
 	font-weight: normal;
 }
@@ -651,7 +651,7 @@ fieldset.polls dt {
 fieldset.polls dd {
 	width: 10%;
 	padding: 0 5px;
-	margin-inline: 0 !important;
+	margin-inline: 0;
 	font-size: 1.1em;
 }
 
@@ -797,17 +797,8 @@ dd.profile-contact {
 }
 
 /* pm list in compose message if mass pm is enabled */
-dl.pmlist dt {
-	width: 60% !important;
-}
-
 dl.pmlist dt textarea {
 	width: 95%;
-}
-
-dl.pmlist dd {
-	margin-inline-start: 61% !important;
-	margin-bottom: 2px;
 }
 
 .attachment-filename {
