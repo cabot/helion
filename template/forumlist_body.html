@@ -32,7 +32,7 @@
 			<dl class="row-item {{ forumrow.FORUM_IMG_STYLE }} has-svg-icon">
 				<dt title="{% if forumrow.S_IS_LINK %}{{ lang('FORUM_LINK') }}{% else %}{{ forumrow.FORUM_FOLDER_IMG_ALT }}{% endif %}">
 					<a href="{{ forumrow.U_VIEWFORUM }}" class="svgicon svgicon-link">
-						{{ include('svgicons/' ~ forumrow.FORUM_IMG_STYLE ~ '.svg', {
+						{{ include('svg/marker/' ~ forumrow.FORUM_IMG_STYLE ~ '.svg', {
 							'aria_label': forumrow.FORUM_NAME ~ (forumrow.S_IS_LINK ? (' - ' ~ lang('FORUM_LINK')) : forumrow.S_UNREAD_FORUM ? (' - ' ~ forumrow.FORUM_FOLDER_IMG_ALT))
 						}, ignore_missing = true) }}
 					</a>

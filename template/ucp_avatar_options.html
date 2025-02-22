@@ -8,7 +8,7 @@
 	{% if ERROR %}<p class="error">{{ ERROR }}</p>{% endif %}
 		<dl>
 			<dt><label>{{ lang('CURRENT_IMAGE') ~ lang('COLON') }}</label><br /><span>{{ lang('AVATAR_EXPLAIN') }}</span></dt>
-			<dd>{% if AVATAR %}{{ AVATAR }}{% else %}{% include '/svgicons/no_avatar.svg' %}{% endif %}</dd>
+			<dd>{% if AVATAR %}{{ AVATAR }}{% else %}{% include '/svg/no_avatar.svg' %}{% endif %}</dd>
 			<dd><label for="avatar_delete"><input type="checkbox" name="avatar_delete" id="avatar_delete" /> {{ lang('DELETE_AVATAR') }}</label></dd>
 		</dl>
 	</fieldset>

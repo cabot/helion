@@ -22,7 +22,7 @@
 					{% if notifications.URL %}
 						<a class="notification-block" href="{% if notifications.UNREAD %}{{ notifications.U_MARK_READ }}" data-real-url="{{ notifications.URL }}{% else %}{{ notifications.URL }}{% endif %}">
 					{% endif %}
-						{% if notifications.AVATAR %}{{ notifications.AVATAR }}{% else %}{% include '/svgicons/no_avatar.svg' %}{% endif %}
+						{% if notifications.AVATAR %}{{ notifications.AVATAR }}{% else %}{% include '/svg/no_avatar.svg' %}{% endif %}
 						<div class="notification_text">
 							<p class="notification-title">{{ notifications.FORMATTED_TITLE }}</p>
 							{% if notifications.REFERENCE %}<p class="notification-reference">{{ notifications.REFERENCE }}</p>{% endif %}

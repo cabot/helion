@@ -60,7 +60,7 @@
 				<dl class="row-item {{ messagerow.FOLDER_IMG_STYLE }} has-svg-icon">
 					<dt>
 						{% if not messagerow.S_PM_DELETED %}<a href="{{ messagerow.U_VIEW_PM }}" class="svgicon svgicon-link">{% else %}<span class="svgicon svgicon-span">{% endif %}
-							{{ include('svgicons/' ~ messagerow.FOLDER_IMG_STYLE ~ '.svg', {
+							{{ include('svg/marker/' ~ messagerow.FOLDER_IMG_STYLE ~ '.svg', {
 								s_not_link: messagerow.S_PM_DELETED ? true,
 								'aria_label': messagerow.SUBJECT
 							}, ignore_missing = true) }}

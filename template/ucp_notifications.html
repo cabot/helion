@@ -72,7 +72,7 @@
 							<dl>
 								<dt>
 									<div class="list-inner">
-										{% if notification_list.AVATAR %}{{ notification_list.AVATAR }}{% else %}{% include '/svgicons/no_avatar.svg' %}{% endif %}
+										{% if notification_list.AVATAR %}{{ notification_list.AVATAR }}{% else %}{% include '/svg/no_avatar.svg' %}{% endif %}
 										<div class="notifications">
 											{% if notification_list.URL %}<a href="{% if notification_list.UNREAD %}{{ notification_list.U_MARK_READ }}{% else %}{{ notification_list.URL }}{% endif %}">{% endif %}
 											<p class="notifications_title">{{ notification_list.FORMATTED_TITLE }}{% if notification_list.REFERENCE %} {{ notification_list.REFERENCE }}{% endif %}</p>

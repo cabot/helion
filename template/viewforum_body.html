@@ -157,7 +157,7 @@
 			<dl class="row-item {{ topicrow.TOPIC_IMG_STYLE }} has-svg-icon">
 				<dt title="{{ topicrow.TOPIC_FOLDER_IMG_ALT }}">
 					{% if not S_IS_BOT and topicrow.U_VIEW_TOPIC %}<a href="{{ topicrow.S_UNREAD_TOPIC ? topicrow.U_NEWEST_POST : topicrow.U_VIEW_TOPIC }}" class="svgicon svgicon-link"{% if topicrow.S_UNREAD_TOPIC %} title="{{ lang('VIEW_NEWEST_POST') }}"{% endif %}>{% else %}<span class="svgicon svgicon-span">{% endif %}
-					{{ include('svgicons/' ~ topicrow.TOPIC_IMG_STYLE ~ '.svg', {
+					{{ include('svg/marker/' ~ topicrow.TOPIC_IMG_STYLE ~ '.svg', {
 						s_not_link: (S_IS_BOT or not topicrow.U_VIEW_TOPIC) ? true,
 						'aria_label': topicrow.TOPIC_TITLE ~ (topicrow.S_UNREAD_TOPIC ? (' - ' ~ lang('VIEW_NEWEST_POST')))
 					}, ignore_missing = true) }}

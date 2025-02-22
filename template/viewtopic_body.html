@@ -144,7 +144,7 @@
 				<div class="avatar-container">
 					<!-- EVENT viewtopic_body_avatar_before -->
 
-						<!-- IF postrow.U_POST_AUTHOR --><a href="{postrow.U_POST_AUTHOR}" class="avatar"><!-- IF postrow.POSTER_AVATAR -->{postrow.POSTER_AVATAR}<!-- ELSE -->{{ include ('svgicons/no_avatar.svg', ignore_missing = true) }}<!-- ENDIF --></a><!-- ELSE --><span class="avatar"><!-- IF postrow.POSTER_AVATAR -->{postrow.POSTER_AVATAR}<!-- ELSE -->{{ include ('svgicons/no_avatar.svg', ignore_missing = true) }}<!-- ENDIF --></span><!-- ENDIF -->
+						<!-- IF postrow.U_POST_AUTHOR --><a href="{postrow.U_POST_AUTHOR}" class="avatar"><!-- IF postrow.POSTER_AVATAR -->{postrow.POSTER_AVATAR}<!-- ELSE -->{{ include ('svg/no_avatar.svg', ignore_missing = true) }}<!-- ENDIF --></a><!-- ELSE --><span class="avatar"><!-- IF postrow.POSTER_AVATAR -->{postrow.POSTER_AVATAR}<!-- ELSE -->{{ include ('svg/no_avatar.svg', ignore_missing = true) }}<!-- ENDIF --></span><!-- ENDIF -->
 
 					<!-- EVENT viewtopic_body_avatar_after -->
 				</div>
@@ -193,7 +193,7 @@
 								<!-- ENDIF -->
 									<a href="<!-- IF postrow.contact.U_CONTACT -->{postrow.contact.U_CONTACT}<!-- ELSE -->{postrow.U_POST_AUTHOR}<!-- ENDIF -->" title="{postrow.contact.NAME}"<!-- IF $S_LAST_CELL --> class="last-cell"<!-- ENDIF --><!-- IF postrow.contact.ID eq 'jabber' --> onclick="popup(this.href, 750, 320); return false;"<!-- ENDIF -->>
 										{% EVENT viewtopic_body_contact_icon_prepend %}
-										{{ include('svgicons/contact/' ~ postrow.contact.ID ~ '-icon.svg', { 'aria_label': postrow.contact.NAME }, ignore_missing = true) ?: include('svgicons/contact/link-icon.svg', { 'aria_label': postrow.contact.NAME }, ignore_missing = true) }}
+										{{ include('svg/contact/' ~ postrow.contact.ID ~ '-icon.svg', { 'aria_label': postrow.contact.NAME }, ignore_missing = true) ?: include('svg/contact/link-icon.svg', { 'aria_label': postrow.contact.NAME }, ignore_missing = true) }}
 										{% EVENT viewtopic_body_contact_icon_append %}
 									</a>
 								<!-- IF REMAINDER eq 3 or postrow.contact.S_LAST_ROW -->
