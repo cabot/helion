@@ -436,6 +436,12 @@ ul.searchresults {
 	clear: both;
 }
 
+h2.searchresults-title {
+	padding: .25em;
+	text-align: center;
+	font-size: 1rem;
+}
+
 /* BB Code styles
 ----------------------------------------*/
 /* Quote block */

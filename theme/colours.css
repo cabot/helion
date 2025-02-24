@@ -1229,7 +1229,8 @@ th a,
 .forumbg .header,
 .forabg .header,
 th,
-.header {
+.header,
+h2.searchresults-title {
 	background: var(--unread-bg, var(--primary-color)) var(--common-gradient);
 	color: var(--contrast-color);
 	border-radius: var(--block-radius);
@@ -1241,8 +1242,13 @@ th,
 .forumbg .header:hover,
 .forabg .header:hover,
 th:hover,
-.header:hover {
+.header:hover,
+h2.searchresults-title:hover {
 	background-color: var(--secondary-color);
+}
+
+h2.searchresults-title a {
+	color: var(--contrast-color);
 }
 
 .time {
