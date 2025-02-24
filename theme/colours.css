@@ -1057,11 +1057,11 @@ fieldset.quick-login input.inputbox {
 }
 
 .inputbox:hover {
-	border-color: #11A3EA;
+	border-color: #a2b1bc;
 }
 
 .inputbox:focus {
-	border-color: #11A3EA;
+	border-color: #d28484;
 }
 
 .inputbox:focus:-moz-placeholder {
