@@ -105,8 +105,8 @@ ul.cplist {
 	line-height: normal;
 }
 
-.tabs > ul,
-.minitabs > ul {
+.tabs>ul,
+.minitabs>ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -118,12 +118,11 @@ ul.cplist {
 	display: block;
 	float: inline-start;
 	font-size: 1em;
-	font-weight: bold;
 	line-height: 1.4em;
 }
 
-.tabs .tab > a,
-.minitabs .tab > a {
+.tabs .tab>a,
+.minitabs .tab>a {
 	display: block;
 	padding: 5px 9px;
 	position: relative;
@@ -139,7 +138,7 @@ ul.cplist {
 	margin-inline: 7px 0;
 }
 
-.tabs .tab > a {
+.tabs .tab>a {
 	margin-block: 4px 0;
 	margin-inline: 0 1px;
 }
@@ -148,7 +147,7 @@ ul.cplist {
 ----------------------------------------*/
 .minitabs {
 	float: inline-end;
-	margin-block: 15px 0;
+	margin-block: 21px 0;
 	margin-inline: 0 7px;
 	max-width: 50%;
 }
@@ -157,12 +156,12 @@ ul.cplist {
 	float: inline-end;
 }
 
-.minitabs .tab > a {
+.minitabs .tab>a {
 	border-radius: 5px 5px 0 0;
 	margin-inline-start: 2px;
 }
 
-.minitabs .tab > a:hover {
+.minitabs .tab>a:hover {
 	text-decoration: none;
 }
 
@@ -172,7 +171,7 @@ ul.cplist {
 	position: relative;
 }
 
-.responsive-tab > a.responsive-tab-link {
+.responsive-tab>a.responsive-tab-link {
 	display: block;
 	font-size: 1.6em;
 	position: relative;

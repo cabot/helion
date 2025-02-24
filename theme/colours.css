@@ -814,13 +814,13 @@ ul.cplist {
 /* Mini tabbed menu used in MCP
 ----------------------------------------*/
 .minitabs .tab>a {
-	background-color: #E1EBF2;
+	background-color: var(--block-background);
 }
 
 .minitabs .activetab>a,
 .minitabs .activetab>a:hover {
-	background-color: #F9F9F9;
-	color: #333333;
+	background: var(--primary-color) var(--common-gradient);
+	color: var(--contrast-color);
 }
 
 /* Responsive tabs
