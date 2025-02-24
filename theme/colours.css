@@ -1232,7 +1232,8 @@ th a,
 .forabg .header,
 th,
 .header,
-h2.searchresults-title {
+h2.searchresults-title,
+h2.topic-title {
 	background: var(--unread-bg, var(--primary-color)) var(--common-gradient);
 	color: var(--contrast-color);
 	border-radius: var(--block-radius);
@@ -1245,11 +1246,13 @@ h2.searchresults-title {
 .forabg .header:hover,
 th:hover,
 .header:hover,
-h2.searchresults-title:hover {
+h2.searchresults-title:hover,
+h2.topic-title:hover {
 	background-color: var(--secondary-color);
 }
 
-h2.searchresults-title a {
+h2.searchresults-title a,
+h2.topic-title a {
 	color: var(--contrast-color);
 }
 

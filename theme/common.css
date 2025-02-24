@@ -39,6 +39,12 @@ h2.solo {
 	margin-bottom: 1em;
 }
 
+h2.topic-title {
+	text-align: center;
+	padding: .25em;
+	margin-block-end: 1em;
+}
+
 h3 {
 	/* Sub-headers (also used as post headers, but defined later) */
 	font-family: Arial, Helvetica, sans-serif;
@@ -249,7 +255,7 @@ ul.linklist {
 	padding: 5px 10px;
 }
 
-ul.linklist > li {
+ul.linklist>li {
 	float: inline-start;
 	font-size: 1.1em;
 	line-height: 2.2em;
@@ -259,7 +265,7 @@ ul.linklist > li {
 	width: auto;
 }
 
-ul.linklist > li.rightside,
+ul.linklist>li.rightside,
 p.rightside,
 a.rightside {
 	float: inline-end;
@@ -316,7 +322,7 @@ ul.linklist .dropdown-up .dropdown {
 
 /* Bulletin icons for list items
 ----------------------------------------*/
-ul.linklist.bulletin > li:before {
+ul.linklist.bulletin>li:before {
 	display: inline-block;
 	content: "\2022";
 	font-size: inherit;
@@ -324,12 +330,12 @@ ul.linklist.bulletin > li:before {
 	padding-inline-end: 4px;
 }
 
-ul.linklist.bulletin > li:first-child:before,
-ul.linklist.bulletin > li.rightside:last-child:before {
+ul.linklist.bulletin>li:first-child:before,
+ul.linklist.bulletin>li.rightside:last-child:before {
 	content: none;
 }
 
-ul.linklist.bulletin > li.no-bulletin:before {
+ul.linklist.bulletin>li.no-bulletin:before {
 	content: none;
 }
 
@@ -522,7 +528,7 @@ a.header-avatar span:after {
 	width: 0px;
 }
 
-.jumpbox .spacer + .spacer {
+.jumpbox .spacer+.spacer {
 	width: 20px;
 }
 
@@ -547,16 +553,16 @@ a.header-avatar span:after {
 	text-align: start;
 }
 
-.dropdown-contents > li {
+.dropdown-contents>li {
 	padding-inline-end: 15px;
 }
 
-.dropdown-nonscroll > li {
+.dropdown-nonscroll>li {
 	padding-inline-end: 0;
 }
 
 .dropdown li:first-child,
-.dropdown li.separator + li,
+.dropdown li.separator+li,
 .dropdown li li {
 	border-top: 0;
 }
@@ -766,7 +772,7 @@ table.info tbody th {
 	margin: 0;
 }
 
-.forumbg-table > .inner {
+.forumbg-table>.inner {
 	margin: 0 -1px;
 }
 
@@ -854,7 +860,7 @@ fieldset.fields1 dd.recipients {
 	margin-inline-start: 1em;
 }
 
-fieldset.fields1 dl.pmlist > dt {
+fieldset.fields1 dl.pmlist>dt {
 	width: auto;
 }
 
@@ -869,7 +875,7 @@ fieldset.fields1 dl.pmlist dd.recipients {
 	margin: 4px 0;
 }
 
-.forabg + .action-bar {
+.forabg+.action-bar {
 	margin-top: 2em;
 }
 
@@ -899,13 +905,13 @@ fieldset.fields1 dl.pmlist dd.recipients {
 	float: none;
 }
 
-.pagination > ul {
+.pagination>ul {
 	display: inline-block;
 	list-style: none !important;
 	margin-inline-start: 5px;
 }
 
-.pagination > ul > li {
+.pagination>ul>li {
 	display: inline-block !important;
 	padding: 0;
 	font-size: 100%;
@@ -959,7 +965,7 @@ fieldset.fields1 dl.pmlist dd.recipients {
 	margin-bottom: 3px;
 }
 
-.row .pagination > ul {
+.row .pagination>ul {
 	margin: 0;
 }
 
@@ -1009,11 +1015,11 @@ only screen and (max-device-width: 500px) {
 	padding-bottom: 8px;
 }
 
-.phpbb_alert div.alert_text > p,
-.phpbb_alert div.alert_text > label,
-.phpbb_alert div.alert_text > select,
-.phpbb_alert div.alert_text > textarea,
-.phpbb_alert div.alert_text > input {
+.phpbb_alert div.alert_text>p,
+.phpbb_alert div.alert_text>label,
+.phpbb_alert div.alert_text>select,
+.phpbb_alert div.alert_text>textarea,
+.phpbb_alert div.alert_text>input {
 	font-size: 1.1em;
 }
 
@@ -1115,7 +1121,7 @@ p.post-notice {
 	margin-inline: 10px;
 }
 
-form > p.post-notice strong {
+form>p.post-notice strong {
 	line-height: 20px;
 }
 
@@ -1143,8 +1149,8 @@ ul.linklist:after,
 .action-bar:after,
 .notification_text:after,
 .tabs-container:after,
-.tabs > ul:after,
-.minitabs > ul:after,
+.tabs>ul:after,
+.minitabs>ul:after,
 .postprofile .avatar-container:after {
 	clear: both;
 	content: '';
@@ -1256,13 +1262,13 @@ ul.linklist:after,
 	padding: 8px;
 }
 
-.dropdown-extended .footer > a {
+.dropdown-extended .footer>a {
 	padding: 5px 0;
 }
 
 .dropdown-extended ul li a,
-.notification_list dt > a,
-.dropdown-extended .footer > a {
+.notification_list dt>a,
+.dropdown-extended .footer>a {
 	display: block;
 	text-decoration: none;
 }
@@ -1346,7 +1352,7 @@ ul.linklist:after,
 	margin-inline: 0 7px;
 }
 
-.linklist.compact .rightside > a > span {
+.linklist.compact .rightside>a>span {
 	display: none;
 }
 
@@ -1366,10 +1372,10 @@ ul.linklist:after,
 	display: none;
 }
 
-.dropdown .clone.hidden + li.separator {
+.dropdown .clone.hidden+li.separator {
 	display: none;
 }
 
-.dropdown .clone.hidden + li {
+.dropdown .clone.hidden+li {
 	border-top: none;
 }
