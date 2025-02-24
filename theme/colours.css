@@ -815,6 +815,8 @@ ul.cplist {
 ----------------------------------------*/
 .minitabs .tab>a {
 	background-color: var(--block-background);
+	border: var(--block-border);
+	border-bottom: none;
 }
 
 .minitabs .activetab>a,
