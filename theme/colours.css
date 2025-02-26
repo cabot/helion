@@ -202,7 +202,7 @@ table.table1 tbody tr.hover {
 }
 
 table.table1 td {
-	color: #536482;
+	color: var(--text-dark);
 }
 
 table.table1 tbody td {
