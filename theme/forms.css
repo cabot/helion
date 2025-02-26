@@ -429,8 +429,7 @@ input.button3:focus {
 	border-start-start-radius: 4px;
 	border-end-start-radius: 4px;
 	float: inline-start;
-	height: 24px;
-	padding: 3px;
+	padding: 4px;
 	box-sizing: border-box;
 }
 
@@ -443,7 +442,7 @@ input.button3:focus {
 	margin-inline-end: 10px;
 }
 
-.navbar .linklist > li.responsive-search {
+.navbar .linklist>li.responsive-search {
 	display: none;
 }
 

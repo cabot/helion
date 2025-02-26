@@ -42,6 +42,7 @@ html,
 body {
 	color: #333;
 	background: #e2e2e2 linear-gradient(to bottom, hsla(0, 0%, 100%, 0.7) 0%, hsla(0, 0%, 100%, 0.66) 11%, hsla(0, 0%, 100%, 0.59) 22%, hsla(0, 0%, 100%, 0.15) 73%, hsla(0, 0%, 100%, 0.04) 90%, hsla(0, 0%, 100%, 0) 100%) repeat-x 0 0 / auto 400px;
+	accent-color: var(--primary-color);
 }
 
 h1 {
@@ -201,7 +202,7 @@ table.table1 tbody tr.hover {
 }
 
 table.table1 td {
-	color: #536482;
+	color: var(--text-dark);
 }
 
 table.table1 tbody td {
@@ -447,8 +448,7 @@ dl.faq dt {
 }
 
 .posthilit {
-	background-color: #F3BFCC;
-	color: #BC2A4D;
+	background-color: #e3e37f;
 }
 
 /* Post signature */
@@ -564,10 +564,6 @@ dl.thumbnail dt a:hover img {
 
 fieldset.polls dl {
 	border-top-color: #DCDEE2;
-	color: #666666;
-}
-
-fieldset.polls dl.voted {
 	color: var(--text-dark);
 }
 
@@ -575,29 +571,16 @@ fieldset.polls dd div {
 	color: #FFFFFF;
 }
 
-.pollbar1 {
-	background-color: #aa2346;
-	border-color: #74162C;
+[class*="pollbar"] {
+	background: var(--primary-color) var(--common-gradient);
 }
 
-.pollbar2 {
-	background-color: #BE1E4A;
-	border-color: #8C1C38;
+.voted [class*="pollbar"] {
+	background: var(--secondary-color) var(--common-gradient);
 }
 
-.pollbar3 {
-	background-color: #D11A4E;
-	border-color: #AA2346;
-}
-
-.pollbar4 {
-	background-color: #E41653;
-	border-color: #BE1E4A;
-}
-
-.pollbar5 {
-	background-color: #F81157;
-	border-color: #D11A4E;
+.poll_max_votes {
+	color: #808080;
 }
 
 /* Poster profile block
@@ -806,38 +789,40 @@ ul.cplist {
 
 /* CP tabbed menu
 ----------------------------------------*/
-.tabs .tab > a {
+.tabs .tab>a {
 	background-color: var(--block-background);
 	border: var(--block-border);
 	border-radius: var(--block-radius);
 	transition: var(--transition-bg);
 }
 
-.tabs .tab > a:hover {
+.tabs .tab>a:hover {
 	background: var(--primary-color) var(--common-gradient);
 	color: var(--contrast-color);
 }
 
-.tabs .activetab > a,
-.tabs .activetab > a:hover {
+.tabs .activetab>a,
+.tabs .activetab>a:hover {
 	background: var(--primary-color) var(--common-gradient);
 	color: var(--contrast-color);
 }
 
-.tabs .activetab > a:hover {
+.tabs .activetab>a:hover {
 	background-color: var(--secondary-color);
 }
 
 /* Mini tabbed menu used in MCP
 ----------------------------------------*/
-.minitabs .tab > a {
-	background-color: #E1EBF2;
+.minitabs .tab>a {
+	background-color: var(--block-background);
+	border: var(--block-border);
+	border-bottom: none;
 }
 
-.minitabs .activetab > a,
-.minitabs .activetab > a:hover {
-	background-color: #F9F9F9;
-	color: #333333;
+.minitabs .activetab>a,
+.minitabs .activetab>a:hover {
+	background: var(--primary-color) var(--common-gradient);
+	color: var(--contrast-color);
 }
 
 /* Responsive tabs
@@ -1074,11 +1059,11 @@ fieldset.quick-login input.inputbox {
 }
 
 .inputbox:hover {
-	border-color: #11A3EA;
+	border-color: #a2b1bc;
 }
 
 .inputbox:focus {
-	border-color: #11A3EA;
+	border-color: #d28484;
 }
 
 .inputbox:focus:-moz-placeholder {
@@ -1246,7 +1231,9 @@ th a,
 .forumbg .header,
 .forabg .header,
 th,
-.header {
+.header,
+h2.searchresults-title,
+h2.topic-title {
 	background: var(--unread-bg, var(--primary-color)) var(--common-gradient);
 	color: var(--contrast-color);
 	border-radius: var(--block-radius);
@@ -1258,8 +1245,15 @@ th,
 .forumbg .header:hover,
 .forabg .header:hover,
 th:hover,
-.header:hover {
+.header:hover,
+h2.searchresults-title:hover,
+h2.topic-title:hover {
 	background-color: var(--secondary-color);
+}
+
+h2.searchresults-title a,
+h2.topic-title a {
+	color: var(--contrast-color);
 }
 
 .time {
@@ -1316,7 +1310,7 @@ th:hover,
 	z-index: 999;
 }
 
-.menu-login:hover + .header-login-popup,
+.menu-login:hover+.header-login-popup,
 .header-login-popup:hover,
 .header-login-popup:focus-within {
 	opacity: 1;
