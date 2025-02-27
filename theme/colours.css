@@ -576,7 +576,7 @@ fieldset.polls dd div {
 }
 
 .voted [class*="pollbar"] {
-	background: var(--secondary-color) var(--common-gradient);
+	background-color: var(--secondary-color);
 }
 
 .poll_max_votes {
@@ -1116,8 +1116,13 @@ input.disabled {
 /* jQuery popups
 ---------------------------------------- */
 .phpbb_alert {
-	background-color: #FFFFFF;
+	--alert-bg: #fff;
+	background-color: var(--alert-bg);
 	border-color: #999999;
+}
+
+.phpbb_alert .alert_close {
+	background: var(--alert-bg);
 }
 
 .darken {
@@ -1158,12 +1163,16 @@ input.disabled {
 	text-shadow: var(--text-shadow);
 }
 
+.dropdown {
+	--dropdown-bg: #fff;
+}
+
 .dropdown .pointer {
 	border-color: var(--primary-color) transparent;
 }
 
 .dropdown .pointer-inner {
-	border-color: #FFF transparent;
+	border-color: var(--dropdown-bg) transparent;
 }
 
 .dropdown-extended .pointer-inner {
@@ -1171,7 +1180,7 @@ input.disabled {
 }
 
 .dropdown .dropdown-contents {
-	background: #fff;
+	background: var(--dropdown-bg);
 	border-color: var(--primary-color);
 	box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
 }
