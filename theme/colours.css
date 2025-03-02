@@ -1273,7 +1273,6 @@ h2.topic-title a {
 ---------------------------------------------------------------------------- */
 .header-login {
 	background: var(--primary-color) var(--common-gradient);
-	padding: 8px 0;
 	margin-bottom: 2px;
 	position: relative;
 	transition: var(--transition-bg);
@@ -1297,6 +1296,7 @@ h2.topic-title a {
 .header-menu-link {
 	color: var(--contrast-color);
 	font-size: 1.4em;
+	line-height: 2.4;
 	text-shadow: var(--text-shadow);
 }
 
