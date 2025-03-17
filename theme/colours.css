@@ -3,15 +3,18 @@
 Colours and backgrounds for common.css
 -------------------------------------------------------------- */
 :root {
+	/* Define here the logo properties */
 	--logo-path: url("./images/logo.svg");
 	--logo-width: 149;
 	--logo-height: 52;
 
-	--primary-hue: 209;
+	/* Define here the two dominant colours */
+	--primary-hue: 209;	/* Blue */
+	--secondary-hue: 0;	/* Red */
+
 	--primary-saturation: 68%;
 	--primary-lightness: 44%;
 	--primary-color: hsl(var(--primary-hue), var(--primary-saturation), var(--primary-lightness));
-	--secondary-hue: 0;
 	--secondary-saturation: 63%;
 	--secondary-lightness: 45%;
 	--secondary-color: hsl(var(--secondary-hue), var(--secondary-saturation), var(--secondary-lightness));
